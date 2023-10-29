@@ -24,7 +24,7 @@ public class BotonesTablaKenKen extends JButton
 {
     //Atributos del botón
     private int bordeSup = 0, bordeInf = 0, bordeIzq = 0, bordeDer = 0; //Estos son los bordes, el objetivo del atributo es ver si se colorea o no el borde del botón
-    private boolean act; //Atributo para colorearlo en caso de estar seleccionado
+    private boolean act, err; //Atributo para colorearlo en caso de estar seleccionado o en caso de tener error
     
     public BotonesTablaKenKen() //Constructor
     {
@@ -86,6 +86,17 @@ public class BotonesTablaKenKen extends JButton
             
             Graphics2D g2 = (Graphics2D) g;
             g2.setColor(new Color(219, 211, 244));
+            int x = getWidth() / 2 - 45;
+            int y = getHeight() / 2 - 19;
+            g2.fillRoundRect(x, y, getWidth(), getHeight(), 13, 13);
+            
+        }
+        
+        if (err)
+        {
+            
+            Graphics2D g2 = (Graphics2D) g;
+            g2.setColor(new Color(221, 65, 84));
             int x = getWidth() / 2 - 45;
             int y = getHeight() / 2 - 19;
             g2.fillRoundRect(x, y, getWidth(), getHeight(), 13, 13);
