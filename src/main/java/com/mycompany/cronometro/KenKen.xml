@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+
+
+<KenKen>
+    <partida>
+        <niveldedificultad>facil</niveldedificultad>
+        <jaula>8, +, (1, 1), (2, 1), (2, 2)</jaula>
+        <jaula>11, +, (1, 2), (1, 3)</jaula>
+        <jaula>3, +, (1, 4), (1, 5)</jaula>
+        <jaula>6, +, (2, 3), (2, 4)</jaula>
+        <jaula>10, +, (2, 5), (3, 5), (4, 5)</jaula>
+        <jaula>11, +, (2, 6), (3, 6)</jaula>
+        <jaula>5, +, (3, 1), (3, 2), (4, 1)</jaula>
+        <jaula>7, +, (3, 3), (4, 3)</jaula>
+        <jaula>11, +, (3, 4), (4, 4)</jaula>
+        <jaula>13, +, (4, 2), (5, 1), (5, 2)</jaula>
+        <jaula>5, +, (4, 6), (5, 6)</jaula>
+        <jaula>7, +, (5, 3), (6, 3)</jaula>
+        <jaula>5, +, (5, 4), (6, 4)</jaula>
+        <jaula>11, +, (5, 5), (6, 5), (6, 6)</jaula>
+        <jaula>10, +, (6, 1), (6, 2)</jaula>
+        <constantes>(3, 1, 6)</constantes>
+    </partida>
+    <partida>
+        <niveldedificultad>facil</niveldedificultad>
+        <jaula>8, +, (1, 1), (2, 1)</jaula>
+        <jaula>7, +, (1, 2), (1, 3)</jaula>
+        <jaula>7, +, (1, 4), (1, 5)</jaula>
+        <jaula>9, +, (1, 6), (2, 6)</jaula>
+        <jaula>3, +, (2, 2), (2, 3)</jaula>
+        <jaula>7, +, (2, 4), (3, 4)</jaula>
+        <jaula>11, +, (2, 5), (3, 5)</jaula>
+        <jaula>3, +, (3, 1), (3, 2)</jaula>
+        <jaula>11, +, (3, 3), (4, 3), (4, 4)</jaula>
+        <jaula>11, +, (4, 1), (4, 2)</jaula>
+        <jaula>5, +, (4, 5), (5, 5)</jaula>
+        <jaula>9, +, (4, 6), (5, 6), (6, 6)</jaula>
+        <jaula>10, +, (5, 1), (5, 2), (6, 1)</jaula>
+        <jaula>6, +, (5, 3), (5, 4)</jaula>
+        <jaula>11, 6, (6, 2), (6, 3)</jaula>
+        <jaula>5, +, (6, 4), (6, 5)</jaula>
+        <constantes>(3, 3, 6)</constantes>
+    </partida>
+    <partida>
+        <niveldedificultad>facil</niveldedificultad>
+        <jaula>3, /, (1, 1), (1, 2)</jaula>
+        <jaula>3, -, (1, 3), (1, 4)</jaula>
+        <jaula>2, -, (1, 5), (1, 6)</jaula>
+        <jaula>1, -, (2, 1), (3, 1)</jaula>
+        <jaula>30, *, (2, 2), (3, 2)</jaula>
+        <jaula>5, +, (2, 3), (3, 3)</jaula>
+        <jaula>7, +, (2, 4), (2, 5)</jaula>
+        <jaula>3, -, (3, 4), (4, 4)</jaula>
+        <jaula>5, -, (3, 5), (4, 5)</jaula>
+        <jaula>1, -, (3, 6), (4, 6)</jaula>
+        <jaula>3, -, (4, 1), (5, 1)</jaula>
+        <jaula>5, -, (4, 3), (5, 3)</jaula>
+        <jaula>3, /, (5, 2), (6, 2)</jaula>
+        <jaula>40, *, (5, 4), (6, 3), (6, 4)</jaula>
+        <jaula>12, *, (5, 5), (6, 5)</jaula>
+        <jaula>3, /, (5, 6), (6, 6)</jaula>
+        <constantes>(1, 2, 6), (4, 4, 2), (1, 6, 1)</constantes>
+    </partida>
+    <partida>
+        <niveldedificultad>intermedio</niveldedificultad>
+        <jaula>5, *, (1, 1), (1, 2), (2, 1)</jaula>
+        <jaula>48, *, (1, 3), (1, 4), (2, 4)</jaula>
+        <jaula>12, *, (1, 5), (1, 6)</jaula>
+        <jaula>6, *, (2, 2), (2, 3)</jaula>
+        <jaula>30, *, (2, 5), (2, 6)</jaula>
+        <jaula>8, *, (3, 1), (4, 1)</jaula>
+        <jaula>30, *, (3, 2), (3, 3), (3, 4), (4, 3)</jaula>
+        <jaula>6, *, (3, 5), (3, 6)</jaula>
+        <jaula>18, *, (4, 2), (5, 2)</jaula>
+        <jaula>120, *, (4, 4), (4, 5), (4, 6), (5, 6)</jaula>
+        <jaula>18, *, (5, 1), (6, 1)</jaula>
+        <jaula>60, *, (5, 3), (6, 3), (6, 4)</jaula>
+        <jaula>20, *, (5, 4), (5, 5), (6, 5), (6, 6)</jaula>
+        <constantes>(4, 6, 2)</constantes>
+    </partida>
+    <partida>
+        <niveldedificultad>intermedio</niveldedificultad>
+        <jaula>3, /, (1, 1), (1, 2)</jaula>
+        <jaula>30, *, (1, 3), (1, 4)</jaula>
+        <jaula>2, -, (1, 5), (1, 6)</jaula>
+        <jaula>2, /, (2, 1), (2, 2)</jaula>
+        <jaula>5, -, (2, 3), (3, 3)</jaula>
+        <jaula>1, -, (2, 4), (2, 5)</jaula>
+        <jaula>3, -, (2, 6), (3, 6)</jaula>
+        <jaula>10, +, (3, 1), (3, 2)</jaula>
+        <jaula>60, *, (3, 4), (3, 5), (4, 5)</jaula>
+        <jaula>11, +, (4, 1), (4, 2), (4, 3)</jaula>
+        <jaula>20, *, (4, 4), (5, 3), (5, 4)</jaula>
+        <jaula>10, *, (5, 1), (6, 1)</jaula>
+        <jaula>12, +, (5, 2), (6, 2), (6, 3)</jaula>
+        <jaula>9, +, (5, 5), (6, 4), (6, 5)</jaula>
+        <jaula>3, -, (5, 6), (6, 6)</jaula>
+        <constantes>(1, 4, 6)</constantes>
+    </partida>
+    <partida>
+        <niveldedificultad>intermedio</niveldedificultad>
+        <jaula>120, *, (1, 1), (1, 2), (1, 3), (2, 1), (2, 3)</jaula>
+        <jaula>24, *, (1, 4), (1, 5), (1, 6)</jaula>
+        <jaula>6, *, (2, 2), (3, 2), (3, 3)</jaula>
+        <jaula>12, *, (2, 4), (2, 5)</jaula>
+        <jaula>20, *, (2, 6), (3, 6)</jaula>
+        <jaula>18, *, (3, 1), (4, 1)</jaula>
+        <jaula>60, *, (3, 4), (3, 5), (4, 4)</jaula>
+        <jaula>10, *, (4, 2), (4, 3)</jaula>
+        <jaula>30, *, (4, 5), (4, 6), (5, 4), (5, 5), (6, 4)</jaula>
+        <jaula>24, *, (5, 1), (5, 2)</jaula>
+        <jaula>120, *, (5, 3), (6, 1), (6, 2), (6, 3)</jaula>
+        <jaula>36, *, (5, 6), (6, 5), (6, 6)</jaula>
+    </partida>
+    <partida>
+        <niveldedificultad>dificil</niveldedificultad>
+        <jaula>20, *, (1, 1), (1, 2), (2, 1)</jaula>
+        <jaula>2, /, (1, 3), (1, 4)</jaula>
+        <jaula>9, +, (1, 5), (1, 6), (2, 5)</jaula>
+        <jaula>12, *, (2, 2), (2, 3), (2, 4)</jaula>
+        <jaula>13, +, (2, 6), (3, 5), (4, 5)</jaula>
+        <jaula>2, -, (3, 1), (3, 2)</jaula>
+        <jaula>11, +, (3, 3), (3, 4), (4, 3)</jaula>
+        <jaula>6, +, (3, 5), (4, 4), (4, 5)</jaula>
+        <jaula>36, *, (4, 1), (4, 2), (5, 2)</jaula>
+        <jaula>13, +, (5, 3), (5, 4), (6, 3)</jaula>
+        <jaula>15, *, (5, 5), (5, 6), (6, 6)</jaula>
+        <jaula>2, /, (6, 1), (6, 2)</jaula>
+        <jaula>1, -, (6, 4), (6, 5)</jaula>
+        <constantes>(1, 5, 1)</constantes>
+    </partida>
+    <partida>
+        <niveldedificultad>dificil</niveldedificultad>
+        <jaula>36, *, (1, 1), (1, 2), (2, 1)</jaula>
+        <jaula>48, *, (1, 3), (1, 4), (2, 3), (2, 4)</jaula>
+        <jaula>15, *, (1, 5), (1, 6), (2, 6)</jaula>
+        <jaula>24, *, (2, 2), (3, 1), (3, 2)</jaula>
+        <jaula>30, *, (3, 3), (3, 4)</jaula>
+        <jaula>720, *, (2, 5), (3, 5), (4, 4), (4, 5), (4, 6), (5, 6)</jaula>
+        <jaula>10, *, (4, 1), (4, 2), (4, 3), (5, 1)</jaula>
+        <jaula>120, *, (5, 2), (6, 1), (6, 2)</jaula>
+        <jaula>15, *, (5, 4), (6, 3), (6, 4)</jaula>
+        <jaula>48, *, (5, 5), (6, 5), (6, 6)</jaula>
+        <constantes>(4, 3, 6), (3, 5, 3)</constantes>
+    </partida>
+    <partida>
+        <niveldedificultad>dificil</niveldedificultad>
+        <jaula>15, +, (1, 1), (2, 1), (3, 1)</jaula>
+        <jaula>10, +, (1, 2), (2, 2), (3, 2)</jaula>
+        <jaula>9, +, (1, 3), (1, 4), (1, 5)</jaula>
+        <jaula>2, -, (1, 6), (2, 6)</jaula>
+        <jaula>1, -, (2, 3), (4, 3)</jaula>
+        <jaula>11, +, (2, 4), (2, 5), (3, 5)</jaula>
+        <jaula>9, +, (3, 4), (4, 4), (5, 5)</jaula>
+        <jaula>1, -, (4, 1), (4, 2)</jaula>
+        <jaula>3, +, (4, 3), (5, 3)</jaula>
+        <jaula>7, +, (4, 5), (5, 5)</jaula>
+        <jaula>10, +, (4, 6), (5, 6)</jaula>
+        <jaula>3, +, (5, 1), (6, 1)</jaula>
+        <jaula>10, +, (6, 2), (6, 3), (6, 4)</jaula>
+        <jaula>1, -, (6, 5), (6, 6)</jaula>
+        <constantes>(2, 3, 6), (6, 5, 2)</constantes>
+    </partida>
+</KenKen>
+
