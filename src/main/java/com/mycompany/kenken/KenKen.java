@@ -4,13 +4,13 @@
 
 package com.mycompany.kenken;
 
+import cronometro.MenuPrincipal;
+
 /**
  *
  * @author jpveg
  */
 public class KenKen {
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
+    
 }

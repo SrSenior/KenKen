@@ -86,9 +86,9 @@ public class BotonesTablaKenKen extends JButton
             
             Graphics2D g2 = (Graphics2D) g;
             g2.setColor(new Color(219, 211, 244));
-            int x = getWidth() / 2 - 45;
-            int y = getHeight() / 2 - 19;
-            g2.fillRoundRect(x, y, getWidth(), getHeight(), 13, 13);
+            int x = getWidth();
+            int y = getHeight();
+            g2.fillRoundRect(0, 0, getWidth(), getHeight(), 13, 13);
             
         }
         

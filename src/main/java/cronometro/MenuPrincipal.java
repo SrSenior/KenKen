@@ -1,5 +1,4 @@
-
-package com.mycompany.cronometro;
+package cronometro;
 
 import java.awt.Image;
 import javax.swing.ImageIcon;
@@ -22,7 +21,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        tempLabel1 = new com.mycompany.cronometro.TempLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -97,7 +95,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 410, 80));
-        jPanel1.add(tempLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 180, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -120,6 +117,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         AjustesDePartida ventana_ajustes = new AjustesDePartida();
         ventana_ajustes.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -142,6 +140,5 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JPanel pnlTitulo;
-    private com.mycompany.cronometro.TempLabel tempLabel1;
     // End of variables declaration//GEN-END:variables
 }

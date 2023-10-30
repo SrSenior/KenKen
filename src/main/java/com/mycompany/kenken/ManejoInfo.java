@@ -7,6 +7,7 @@ package com.mycompany.kenken;
 import TablaKenKen.JaulasKenKen;
 import java.util.ArrayList;
 import java.util.List;
+import cronometro.LeerXML;
 
 /**
  *
@@ -20,12 +21,13 @@ public class ManejoInfo
     
     //Lista que almacenará las jaulas según la dificultad seleccionada
     //El llenado será manual de momento y hasta contar con el xml
-    private static List<JaulasKenKen> jaulasKenKen;
+    private static List<JaulasKenKen> jaulasKenKen = new ArrayList<>();
+    
     
     public ManejoInfo() //Constructor
     {
         
-        jaulasKenKen = new ArrayList<>();
+        LeerXML lecturaJaulas = new LeerXML("src\\main\\java\\com\\mycompany\\cronometro\\KenKen.xml", jaulasKenKen);
         
     }
 
