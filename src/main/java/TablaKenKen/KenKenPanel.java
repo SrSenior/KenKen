@@ -5,9 +5,15 @@
 package TablaKenKen;
 
 import com.mycompany.kenken.ManejoInfo;
+import cronometro.LeerXML;
+import cronometro.Partida;
+import java.awt.Color;
+import java.awt.Component;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JButton;
+import java.util.Random;
+import javax.swing.BorderFactory;
 
 /**
  *
@@ -21,6 +27,9 @@ public class KenKenPanel extends javax.swing.JPanel {
     
     private List<BotonesTablaKenKen> botonesKenKen; //Array que contendrá los 36 botones, cada uno correspondiente a una casilla de la cuadrícula
     private List<JaulasKenKen> Jaulas;
+    private List<Partida> Partidas = ManejoInfo.getPartidas();;
+    private String dificultad;
+    private Random random = new Random();
     
     public KenKenPanel() 
     {
@@ -28,13 +37,18 @@ public class KenKenPanel extends javax.swing.JPanel {
         initComponents();
         
         Jaulas = new ArrayList<>();
-        botonesKenKen = new ArrayList<>();
+        botonesKenKen = new ArrayList<>(); 
         
         CrearBotones();//Función que crea los 36 botones
         PintarBordesBotones();//Función para pintar los bordes de cada botón en relación con la jaula a la que pertenecen
         
     }
 
+    public void setDificultad(String dificultad) 
+    {
+        this.dificultad = dificultad;
+    }
+    
     public void CrearBotones()
     {
         
@@ -53,88 +67,101 @@ public class KenKenPanel extends javax.swing.JPanel {
     public void PintarBordesBotones() //Se pintan los bordes según la jaula a la que pertenezca el botón
     {
 
-        Jaulas = ManejoInfo.getJaulasKenKen(); //Se obtienen todas las jaulas
-        
-        for(JaulasKenKen jaula : Jaulas) //Se recorre cada jaula
-        {
-            List<Integer> casillasCorrespondientes = jaula.getCasillasCorrespondientes(); //Se extrae la lista de los botones que son parte de la jaula que se esté iterando
+        try {
             
-            for (int i = 0; i >= botonesKenKen.size(); i++)//Se recorre toda la lista de botones
+            int seleccion = 0;//Se inicializa porque sino da error
+            
+            //Se pone en un if, puesto que al inicializarse el componente la primera vez, dificulta vale null, 
+            //pero una vez inicializado, ya se le da un valor nuevo a dificultad
+            if(dificultad != null)
             {
                 
-                BotonesTablaKenKen btn = botonesKenKen.get(i);//Se extrae el botón correspondiente al valor actual de i
-                int sup = 0, inf = 0, izq = 0, der = 0; //Se inicializan los bordes con valor 0
-                
-                if (casillasCorrespondientes.contains(i)) //Si la jaula contiene el valor de i, es decir, contiene el botón, se ingresa al condicional
+                switch(dificultad)
                 {
-                    //Como si pertenece, se inicializan todos los bordes
-                    sup = 1;
-                    inf = 1;
-                    izq = 1;
-                    der = 1;
-                    
-                    if (i == 0)//En caso de ser la casilla cero, solo preguntamos por las casillas de la derecha e inferior, puesto que no tiene superior ni izquierda
-                    {
+                    case "Fácil":
 
-                        if (casillasCorrespondientes.contains(i + 1)){ der = 0; } //Si la casilla derecha forma parte de la jaula, ese borde no se pinta para que estén contectados
-                        if (casillasCorrespondientes.contains(i + 6)){ inf = 0; } //Si la casilla inferior forma parte de la jaula, ese borde no se pinta para que estén contectados
+                        // Generar un número aleatorio entre 0 y 2 para escoger alguna de las 3 partidas de dificultad fácil
+                        seleccion = random.nextInt(3);
+                        break;
 
-                        btn.ModificarBordes(sup, inf, izq, der); //Se realiza el pintado con los nueos bordes
+                    case "Intermedio":
 
-                    }
-                    else if (i == botonesKenKen.size()) //En caso de ser la casilla cero, solo preguntamos por las casillas de la izquierda y superior, puesto que no tiene inferior ni derecha
-                    {
+                        // Generar un número aleatorio entre 3 y 5 para escoger alguna de las 3 partidas de dificultad intermedio
+                        seleccion = random.nextInt(3) + 3;
+                        break;
 
-                        if (casillasCorrespondientes.contains(i - 1)){ izq = 0; } 
-                        if (casillasCorrespondientes.contains(i - 6)){ sup = 0; }
+                    case "Difícil":
 
-                        btn.ModificarBordes(sup, inf, izq, der); //Se realiza el pintado con los nueos bordes
+                        // Generar un número aleatorio entre 6 y 8 para escoger alguna de las 3 partidas de dificultad difícil
+                        seleccion = random.nextInt(3) + 6;
+                        break;
 
-                    }
-                    else if(i >= 30 && i != botonesKenKen.size()) //En caso de ser una casilla de la última fila, no se consulta por una fila siguiente
-                    {
-                        if (casillasCorrespondientes.contains(i + 1)){ der = 0; } 
-                        if (casillasCorrespondientes.contains(i - 1)){ izq = 0; }
-                        if (casillasCorrespondientes.contains(i - 6)){ sup = 0; }
-
-                        btn.ModificarBordes(sup, inf, izq, der); //Se realiza el pintado con los nueos bordes
-                    }
-                    else if(i <= 5 && i != 0) //En caso de ser una casilla de la primera fila, no se consulta por una fila anterior
-                    {
-                        if (casillasCorrespondientes.contains(i + 1)){ der = 0; } 
-                        if (casillasCorrespondientes.contains(i - 1)){ izq = 0; }
-                        if (casillasCorrespondientes.contains(i + 6)){ inf = 0; }
-
-                        btn.ModificarBordes(sup, inf, izq, der); //Se realiza el pintado con los nueos bordes
-                    }
-                    else //Si no entra a ninguna de las condiciones anteriores, entonnces consultamos por cualquier posible coincidencia
-                    {
-                        if (casillasCorrespondientes.contains(i + 1)){ der = 0; } 
-                        if (casillasCorrespondientes.contains(i - 1)){ izq = 0; }
-                        if (casillasCorrespondientes.contains(i + 6)){ inf = 0; }
-                        if (casillasCorrespondientes.contains(i - 6)){ sup = 0; }
-
-                        btn.ModificarBordes(sup, inf, izq, der); //Se realiza el pintado con los nueos bordes
-
-                    }
-                    
-                }        
+                }
                 
             }
+
+            Partida partidaAux = Partidas.get(seleccion); //Auxiliar de la Partida que se usará
+            Jaulas = partidaAux.getJaulas(); //Se obtienen todas las jaulas
+            
+                int indiceBtn = 0;
+                
+                for(BotonesTablaKenKen btn : botonesKenKen)
+                {
+                    
+                    int sup = 0, inf = 0, izq = 0, der = 0; //Se inicializan los bordes con valor 0
+                    
+                    for (JaulasKenKen jaulaAux : Jaulas)//Se recorren todas las jaulas
+                    {
+                        
+                        if (jaulaAux.getCasillasCorrespondientes().contains(indiceBtn))//Una vez se encuentre la jaula que contenga al botón actual
+                        {
+                            
+                            //Todos estos if son los encargados de cambiar los bordes y pintarlos
+                            //o despintalos en función de si una casilla tiene casillas hermanas
+                            
+                            if (jaulaAux.getCasillasCorrespondientes().contains(indiceBtn + 1)){ der = 0; }
+                            else{der = 1;}
+
+                            if (jaulaAux.getCasillasCorrespondientes().contains(indiceBtn - 1)){ izq = 0; }
+                            else{izq = 1;}
+
+                            if (jaulaAux.getCasillasCorrespondientes().contains(indiceBtn + 6)){ inf = 0; }
+                            else{inf = 1;}
+
+                            if (jaulaAux.getCasillasCorrespondientes().contains(indiceBtn - 6)){ sup = 0; }
+                            else{sup = 1;}
+
+                            btn.setBorder(BorderFactory.createMatteBorder(sup, izq, inf, der, Color.BLACK));
+                            
+                        }
+                        
+                    }
+                    
+                    indiceBtn ++;
+                    
+                }    
+            
         }
-        
+        catch (Exception e) 
+        {
+            
+            e.printStackTrace();
+            System.out.println("Mensaje de error: " + e.getMessage());
+            
+        }
     }
+    
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         setMaximumSize(new java.awt.Dimension(306, 306));
         setMinimumSize(new java.awt.Dimension(306, 306));
         setPreferredSize(new java.awt.Dimension(306, 306));
         setLayout(new java.awt.GridLayout(6, 6));
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    // End of variables declaration//GEN-END:variables
+    // Variables declaration - do not modify                     
+    // End of variables declaration                   
 }

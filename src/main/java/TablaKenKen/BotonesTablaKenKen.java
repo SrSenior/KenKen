@@ -23,7 +23,6 @@ import javax.swing.JButton;
 public class BotonesTablaKenKen extends JButton
 {
     //Atributos del botón
-    private int bordeSup = 0, bordeInf = 0, bordeIzq = 0, bordeDer = 0; //Estos son los bordes, el objetivo del atributo es ver si se colorea o no el borde del botón
     private boolean act, err; //Atributo para colorearlo en caso de estar seleccionado o en caso de tener error
     
     public BotonesTablaKenKen() //Constructor
@@ -34,77 +33,32 @@ public class BotonesTablaKenKen extends JButton
         setContentAreaFilled(false); // Desactivar el fondo predeterminado del botón
     
     }
-    
-    public void ModificarBordes(int bordeSup, int bordeInf, int bordeIzq, int bordeDer)
-    {
-        this.bordeSup = bordeSup;
-        this.bordeInf = bordeInf;
-        this.bordeIzq = bordeInf;
-        this.bordeDer = bordeDer;
-    }
 
-    //Esta función pinta los bordes y, en caso de ser presionado, el fondo del botón
+    //Esta función pinta el fondo del botón si este se presiona o si tiene error
     @Override
     protected void paintComponent(Graphics g) 
     {
         
-        if(bordeSup == 1)
-        {
-            
-            // Dibuja el borde superior
-            g.setColor(Color.BLACK);
-            g.drawLine(0, 0, getWidth(), 0);
-        
-        }
-        if(bordeInf == 1)
-        {
-            
-            // Dibuja el borde inferior
-            g.setColor(Color.BLACK);
-            g.drawLine(0, getHeight() - 1, getWidth(), getHeight() - 1);
-            
-        }
-        if(bordeIzq == 1)
-        {
-            
-            // Dibuja el borde izquierdo
-            g.setColor(Color.BLACK);
-            g.drawLine(0, 0, 0, getHeight());
-        
-        }
-        if(bordeDer == 1)
-        {
-            
-            // Dibuja el borde derecho
-            g.setColor(Color.BLACK);
-            g.drawLine(getWidth() - 1, 0, getWidth() - 1, getHeight());
-            
-        }
-        
-        if (act)
+        if (act) //Si se activa
         {
             
             Graphics2D g2 = (Graphics2D) g;
             g2.setColor(new Color(219, 211, 244));
-            int x = getWidth();
-            int y = getHeight();
             g2.fillRoundRect(0, 0, getWidth(), getHeight(), 13, 13);
             
         }
         
-        if (err)
+        if (err) //Si tiene error
         {
             
             Graphics2D g2 = (Graphics2D) g;
             g2.setColor(new Color(221, 65, 84));
-            int x = getWidth() / 2 - 45;
-            int y = getHeight() / 2 - 19;
-            g2.fillRoundRect(x, y, getWidth(), getHeight(), 13, 13);
+            g2.fillRoundRect(0, 0, getWidth(), getHeight(), 13, 13);
             
         }
-
+        
+        this.repaint();//Se actualiza la interfaz
         super.paintComponent(g);
-        // Puedes personalizar otros bordes aquí, como el superior e inferior
 
     }
     

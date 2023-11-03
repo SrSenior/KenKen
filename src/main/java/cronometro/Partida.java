@@ -5,6 +5,7 @@
 package cronometro;
 
 import TablaKenKen.JaulasKenKen;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,18 +15,22 @@ import java.util.List;
 public class Partida {
     
     private String nivelDificultad;
-    private List<JaulasKenKen> jaulas;
+    private List<JaulasKenKen> jaulas = new ArrayList<>();
 
-    public void setNivelDificultad(String nivelDificultad) {
+    public Partida(String nivelDificultad, List<JaulasKenKen> jaulas) 
+    {
+        
+        this.nivelDificultad = nivelDificultad;
+        this.jaulas = jaulas;
+        
+    }
+    
+    public void setNivelDificultad(String nivelDificultad) 
+    {
         this.nivelDificultad = nivelDificultad;
     }
 
     public void setJaulas(List<JaulasKenKen> jaulas) {
-        this.jaulas = jaulas;
-    }
-
-    public Partida(String nivelDificultad, List<JaulasKenKen> jaulas) {
-        this.nivelDificultad = nivelDificultad;
         this.jaulas = jaulas;
     }
 

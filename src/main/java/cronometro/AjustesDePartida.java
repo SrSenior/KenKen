@@ -5,6 +5,10 @@
 package cronometro;
 
 import TablaKenKen.FrameJuego;
+import TablaKenKen.KenKenPanel;
+import java.util.Enumeration;
+import javax.swing.AbstractButton;
+import javax.swing.JRadioButton;
 
 /**
  *
@@ -15,9 +19,12 @@ public class AjustesDePartida extends javax.swing.JFrame {
     /**
      * Creates new form AjustesDePartida
      */
-    public AjustesDePartida() {
+    public AjustesDePartida() 
+    {
+        
         initComponents();
         llenarCombobox ();
+        
         lblSeleccionarTiempo.setVisible(false);
         comboHoras.setVisible(false);
         comboMinutos.setVisible(false);
@@ -28,7 +35,7 @@ public class AjustesDePartida extends javax.swing.JFrame {
 
     public void llenarCombobox ()
     {
-        
+        //Se llenan las cajas de las horas y de los minutos con los números del 0 al 59
         for(int i = 0; i < 60; i++)
         {
             
@@ -143,6 +150,11 @@ public class AjustesDePartida extends javax.swing.JFrame {
         btngDificultad.add(rbtnIntermedio);
         rbtnIntermedio.setForeground(new java.awt.Color(0, 105, 192));
         rbtnIntermedio.setText("Intermedio");
+        rbtnIntermedio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtnIntermedioActionPerformed(evt);
+            }
+        });
         jPanel1.add(rbtnIntermedio, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, -1, -1));
 
         rbtnDificil.setBackground(new java.awt.Color(255, 255, 255));
@@ -319,8 +331,19 @@ public class AjustesDePartida extends javax.swing.JFrame {
                 && (rbtnIzquierda.isSelected() || rbtnDerecha.isSelected())
                 && (rbtnNoSonido.isSelected() || rbtnSiSonido.isSelected()))
         {
+            String dificultad = "";//Se inicializa porque sino da error
             
-            FrameJuego ventana_juego = new FrameJuego();
+            //Se revisa que dificultad quedó seleccionada para actuar según eso
+            Enumeration<AbstractButton> elements = btngDificultad.getElements();
+            while (elements.hasMoreElements()) {
+                JRadioButton radioButton = (JRadioButton) elements.nextElement();
+                if (radioButton.isSelected()) {
+                    dificultad = radioButton.getText();
+                    break;
+                }
+            }
+            
+            FrameJuego ventana_juego = new FrameJuego(dificultad);//Se llama a la nueva ventana con la dificultad seleccionada
             ventana_juego.setVisible(true);
             
             this.dispose();
@@ -329,7 +352,7 @@ public class AjustesDePartida extends javax.swing.JFrame {
         else
         {
             
-            panelError.setVisible(true);
+            panelError.setVisible(true);//En caso de haber dejado campo en blanco
             labelTextoError.setText("Seleccione al menos una de las opciones en cada campo");
             
         }
@@ -352,6 +375,10 @@ public class AjustesDePartida extends javax.swing.JFrame {
         this.dispose();
             
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void rbtnIntermedioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnIntermedioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbtnIntermedioActionPerformed
 
     /**
      * @param args the command line arguments

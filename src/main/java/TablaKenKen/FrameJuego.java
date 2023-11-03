@@ -11,14 +11,21 @@ import cronometro.MenuPrincipal;
  * @author jpveg
  */
 public class FrameJuego extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form FrameJuego
+     * @param dificultad es la dificultad según la que deplegamos las jaulas
      */
-    public FrameJuego() {
+    
+    public FrameJuego(String dificultad) 
+    {
+        
         initComponents();
+        kenKenPanel1.setDificultad(dificultad);//Se agrega la dificultad elegida
+        kenKenPanel1.PintarBordesBotones();//Se repintan los bordes con la nueva dificultad
+        
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -29,14 +36,15 @@ public class FrameJuego extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        kenKenPanel1 = new TablaKenKen.KenKenPanel();
         jButton2 = new javax.swing.JButton();
+        kenKenPanel1 = new TablaKenKen.KenKenPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(800, 500));
 
+        jPanel1.setMinimumSize(new java.awt.Dimension(800, 500));
+        jPanel1.setPreferredSize(new java.awt.Dimension(800, 500));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(kenKenPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, -1, -1));
 
         jButton2.setBackground(new java.awt.Color(0, 105, 192));
         jButton2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
@@ -49,15 +57,18 @@ public class FrameJuego extends javax.swing.JFrame {
         });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 110, 50));
 
+        kenKenPanel1.setDificultad(null);
+        jPanel1.add(kenKenPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 812, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 512, Short.MAX_VALUE)
         );
 
         pack();
@@ -65,9 +76,10 @@ public class FrameJuego extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
+        //Si se presiona el botón de salir, regresa al menú principal
         MenuPrincipal ventana_menu = new MenuPrincipal();
         ventana_menu.setVisible(true);
-
+        
         this.dispose();
 
     }//GEN-LAST:event_jButton2ActionPerformed
