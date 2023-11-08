@@ -27,7 +27,8 @@ public class KenKenPanel extends javax.swing.JPanel {
     
     private List<BotonesTablaKenKen> botonesKenKen; //Array que contendrá los 36 botones, cada uno correspondiente a una casilla de la cuadrícula
     private List<JaulasKenKen> Jaulas;
-    private List<Partida> Partidas = ManejoInfo.getPartidas();;
+    private List<Partida> Partidas = ManejoInfo.getPartidas();
+    private Partida partidaAux;
     private String dificultad;
     private Random random = new Random();
     
@@ -40,7 +41,6 @@ public class KenKenPanel extends javax.swing.JPanel {
         botonesKenKen = new ArrayList<>(); 
         
         CrearBotones();//Función que crea los 36 botones
-        PintarBordesBotones();//Función para pintar los bordes de cada botón en relación con la jaula a la que pertenecen
         
     }
 
@@ -64,12 +64,15 @@ public class KenKenPanel extends javax.swing.JPanel {
         
     }
     
-    public void PintarBordesBotones() //Se pintan los bordes según la jaula a la que pertenezca el botón
+    //Se pintan los bordes según la jaula a la que pertenezca el botón
+    //además le agrega texto si este lo incluye o si es presionado
+    public void PintarBordesBotones() 
     {
 
         try {
             
             int seleccion = 0;//Se inicializa porque sino da error
+            int contador = 0;
             
             //Se pone en un if, puesto que al inicializarse el componente la primera vez, dificulta vale null, 
             //pero una vez inicializado, ya se le da un valor nuevo a dificultad
@@ -100,10 +103,14 @@ public class KenKenPanel extends javax.swing.JPanel {
                 
             }
 
-            Partida partidaAux = Partidas.get(seleccion); //Auxiliar de la Partida que se usará
+            partidaAux = Partidas.get(seleccion); //La Partida que se usará
             Jaulas = partidaAux.getJaulas(); //Se obtienen todas las jaulas
             
                 int indiceBtn = 0;
+                
+                //Esta lista almacena cuales son los índices de losprimeros botones 
+                //de cada lista para ponerles el texto de operación y valor
+                List<Integer> primerosBotones = new ArrayList<>();
                 
                 for(BotonesTablaKenKen btn : botonesKenKen)
                 {
@@ -113,8 +120,17 @@ public class KenKenPanel extends javax.swing.JPanel {
                     for (JaulasKenKen jaulaAux : Jaulas)//Se recorren todas las jaulas
                     {
                         
+                        if(indiceBtn == 0)
+                        {
+                            //Se agrega el primer elemento de la jaula
+                            primerosBotones.add(jaulaAux.getCasillasCorrespondientes().get(0));
+                            
+                        }
+                        System.out.println("Valor de primerosBotones: " + primerosBotones);
+                        
                         if (jaulaAux.getCasillasCorrespondientes().contains(indiceBtn))//Una vez se encuentre la jaula que contenga al botón actual
                         {
+                            
                             
                             //Todos estos if son los encargados de cambiar los bordes y pintarlos
                             //o despintalos en función de si una casilla tiene casillas hermanas
@@ -135,6 +151,21 @@ public class KenKenPanel extends javax.swing.JPanel {
                             
                         }
                         
+//                        //Este if agrega el texto superior en caso de que el botón sea el primero de la lista
+                        if (indiceBtn == jaulaAux.getCasillasCorrespondientes().get(0) && !primerosBotones.isEmpty())
+                        {
+                            
+                            System.out.println("Botón actuál: " + indiceBtn);
+                            System.out.println("Primera casilla de la jaula actual: " + jaulaAux.getCasillasCorrespondientes().get(0));
+                            
+                            String texto = jaulaAux.getValor() + jaulaAux.getOperacion();
+                            
+                            System.out.println("Texto a agregar: " + texto);
+                            btn.setTextoSuperior(texto);
+                            primerosBotones.remove(0);
+                            
+                        }
+                        
                     }
                     
                     indiceBtn ++;
@@ -148,6 +179,15 @@ public class KenKenPanel extends javax.swing.JPanel {
             e.printStackTrace();
             System.out.println("Mensaje de error: " + e.getMessage());
             
+        }
+    }
+    
+    public void AgregarTextoCentral(String texto)
+    {
+        int indiceBtn = 0;
+        for(BotonesTablaKenKen btn : botonesKenKen)
+        {
+            btn.setTextoPrincipal(texto);
         }
     }
     

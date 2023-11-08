@@ -24,6 +24,8 @@ public class BotonesTablaKenKen extends JButton
 {
     //Atributos del botón
     private boolean act, err; //Atributo para colorearlo en caso de estar seleccionado o en caso de tener error
+    private String textoSuperior = "";
+    private String textoCentral = "";
     
     public BotonesTablaKenKen() //Constructor
     {
@@ -140,4 +142,25 @@ public class BotonesTablaKenKen extends JButton
         }
     }
     
+    public void setTextoPrincipal(String textoCentral)
+    {
+        if(act)
+        {
+            if(textoSuperior == "")
+            {
+                setText("<html><center>" + textoCentral + "</html>");
+            }
+            else
+            {
+                this.setText("<html><center>" + textoSuperior + "<br><br>" + textoCentral +"</html>");
+            }
+        }
+    }
+    
+    public void setTextoSuperior(String texto)
+    {
+        
+        this.setText("<html><center>" + texto + "<br><br>" + " " + "</html>");
+        textoSuperior = texto;
+    }
 }

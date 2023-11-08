@@ -325,6 +325,8 @@ public class AjustesDePartida extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
+        boolean lado;
+        
         //Valida que haya al menos una opción seleccionada en cada posible rubro del menú pre-juego
         if((rbtnFacil.isSelected() || rbtnIntermedio.isSelected() || rbtnDificil.isSelected())
                 && (rbtnCronometro.isSelected() || rbtnTemporizador.isSelected() || rbtnTiempo.isSelected())
@@ -343,7 +345,11 @@ public class AjustesDePartida extends javax.swing.JFrame {
                 }
             }
             
-            FrameJuego ventana_juego = new FrameJuego(dificultad);//Se llama a la nueva ventana con la dificultad seleccionada
+            if(rbtnDerecha.isSelected()){lado = true;}
+            else{lado = false;}
+            
+            
+            FrameJuego ventana_juego = new FrameJuego(dificultad, lado);//Se llama a la nueva ventana con la dificultad seleccionada
             ventana_juego.setVisible(true);
             
             this.dispose();
