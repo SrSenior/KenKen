@@ -24,7 +24,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
         <jaula>5, +, (5, 4), (6, 4)</jaula>
         <jaula>11, +, (5, 5), (6, 5), (6, 6)</jaula>
         <jaula>10, +, (6, 1), (6, 2)</jaula>
-        <constantes>(3, 1, 6)</constantes>
+        <jaula>3,  ,(1, 6)</jaula>
     </partida>
     <partida>
         <niveldedificultad>facil</niveldedificultad>
@@ -44,7 +44,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
         <jaula>6, +, (5, 3), (5, 4)</jaula>
         <jaula>11, 6, (6, 2), (6, 3)</jaula>
         <jaula>5, +, (6, 4), (6, 5)</jaula>
-        <constantes>(3, 3, 6)</constantes>
+        <jaula>3,  ,(3, 6)</jaula>
     </partida>
     <partida>
         <niveldedificultad>facil</niveldedificultad>
@@ -64,7 +64,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
         <jaula>40, *, (5, 4), (6, 3), (6, 4)</jaula>
         <jaula>12, *, (5, 5), (6, 5)</jaula>
         <jaula>3, /, (5, 6), (6, 6)</jaula>
-        <constantes>(1, 2, 6), (4, 4, 2), (1, 6, 1)</constantes>
+        <jaula>1,  , (2, 6)</jaula>
+        <jaula>4,  ,(4, 2)</jaula>
+        <jaula>1,  ,(6, 1)</jaula>
     </partida>
     <partida>
         <niveldedificultad>intermedio</niveldedificultad>
@@ -81,7 +83,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
         <jaula>18, *, (5, 1), (6, 1)</jaula>
         <jaula>60, *, (5, 3), (6, 3), (6, 4)</jaula>
         <jaula>20, *, (5, 4), (5, 5), (6, 5), (6, 6)</jaula>
-        <constantes>(4, 6, 2)</constantes>
+        <jaula>4,  ,(6, 2)</jaula>
     </partida>
     <partida>
         <niveldedificultad>intermedio</niveldedificultad>
@@ -100,7 +102,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
         <jaula>12, +, (5, 2), (6, 2), (6, 3)</jaula>
         <jaula>9, +, (5, 5), (6, 4), (6, 5)</jaula>
         <jaula>3, -, (5, 6), (6, 6)</jaula>
-        <constantes>(1, 4, 6)</constantes>
+        <jaula>1,  ,(4, 6)</jaula>
     </partida>
     <partida>
         <niveldedificultad>intermedio</niveldedificultad>
@@ -132,7 +134,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
         <jaula>15, *, (5, 5), (5, 6), (6, 6)</jaula>
         <jaula>2, /, (6, 1), (6, 2)</jaula>
         <jaula>1, -, (6, 4), (6, 5)</jaula>
-        <constantes>(1, 5, 1)</constantes>
+        <jaula>1,  ,(5, 1)</jaula>
     </partida>
     <partida>
         <niveldedificultad>dificil</niveldedificultad>
@@ -146,7 +148,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
         <jaula>120, *, (5, 2), (6, 1), (6, 2)</jaula>
         <jaula>15, *, (5, 4), (6, 3), (6, 4)</jaula>
         <jaula>48, *, (5, 5), (6, 5), (6, 6)</jaula>
-        <constantes>(4, 3, 6), (3, 5, 3)</constantes>
+        <jaula>4,  ,(3, 6)</jaula>
+        <jaula>3,  ,(5, 3)</jaula>
     </partida>
     <partida>
         <niveldedificultad>dificil</niveldedificultad>
@@ -164,7 +167,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
         <jaula>3, +, (5, 1), (6, 1)</jaula>
         <jaula>10, +, (6, 2), (6, 3), (6, 4)</jaula>
         <jaula>1, -, (6, 5), (6, 6)</jaula>
-        <constantes>(2, 3, 6), (6, 5, 2)</constantes>
+        <jaula>2,  ,(3, 6)</jaula>
+        <jaula>6,  ,(5, 2)</jaula>
     </partida>
 </KenKen>
 

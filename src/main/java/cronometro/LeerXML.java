@@ -134,11 +134,20 @@ public class LeerXML {
                     //Se crea un elemento partida en el que almacenamos la lisa de jaulas previamente creada
                     Partida partida = new Partida(nivelDificultad, new ArrayList<>(jaulasList));
                     
+                    for(JaulasKenKen jaula : jaulasList)
+                    {
+                        System.out.println("\nValor: " + jaula.getValor());
+                        System.out.println("Operación: " + jaula.getOperacion());
+                    }
+                    
                     //Se añade la partida a la lista de partidas
                     listaPartidas.add(partida);
                     
                 }
+                
             }
+            
+            
             
         } 
         catch (Exception e) 
