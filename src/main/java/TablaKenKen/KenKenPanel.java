@@ -31,6 +31,7 @@ public class KenKenPanel extends javax.swing.JPanel {
     private Partida partidaAux;
     private String dificultad;
     private Random random = new Random();
+    private BotonesTablaKenKen[][] matrizDeApollo;
     
     /**
      * Constructor
@@ -42,15 +43,33 @@ public class KenKenPanel extends javax.swing.JPanel {
         
         Jaulas = new ArrayList<>();
         botonesKenKen = new ArrayList<>(); 
-        
         CrearBotones();//Función que crea los 36 botones
         
+//        matrizDeApollo = convertirArrayListAMatriz(botonesKenKen);
     }
+
 
     /**
      * Setter de dificultad
      * @param dificultad 
      */
+
+    public static BotonesTablaKenKen[][] convertirArrayListAMatriz(List<BotonesTablaKenKen> botonesKenKen) {
+
+
+        BotonesTablaKenKen[][] matriz = new BotonesTablaKenKen[6][6];
+        int contador = 0;
+
+        for (int fila = 0; fila < 6; fila++) {
+            for (int columna = 0; columna < 6; columna++) {
+                matriz[fila][columna] = botonesKenKen.get(contador);
+                contador++;
+            }
+        }
+
+        return matriz;
+    }
+
     public void setDificultad(String dificultad) 
     {
         this.dificultad = dificultad;
@@ -139,7 +158,6 @@ public class KenKenPanel extends javax.swing.JPanel {
                             primerosBotones.add(jaulaAux.getCasillasCorrespondientes().get(0));
                             
                         }
-                        System.out.println("Valor de primerosBotones: " + primerosBotones);
                         
                         if (jaulaAux.getCasillasCorrespondientes().contains(indiceBtn))//Una vez se encuentre la jaula que contenga al botón actual
                         {
@@ -164,16 +182,10 @@ public class KenKenPanel extends javax.swing.JPanel {
                             
                         }
                         
-//                        //Este if agrega el texto superior en caso de que el botón sea el primero de la lista
+                        //Este if agrega el texto superior en caso de que el botón sea el primero de la lista
                         if (indiceBtn == jaulaAux.getCasillasCorrespondientes().get(0) && !primerosBotones.isEmpty())
                         {
-                            
-                            System.out.println("Botón actuál: " + indiceBtn);
-                            System.out.println("Primera casilla de la jaula actual: " + jaulaAux.getCasillasCorrespondientes().get(0));
-                            
                             String texto = jaulaAux.getValor() + jaulaAux.getOperacion();
-                            
-                            System.out.println("Texto a agregar: " + texto);
                             btn.setTextoSuperior(texto);
                             primerosBotones.remove(0);
                             
@@ -201,12 +213,82 @@ public class KenKenPanel extends javax.swing.JPanel {
      */
     public void AgregarTextoCentral(String texto)
     {
-        int indiceBtn = 0;
         for(BotonesTablaKenKen btn : botonesKenKen)
         {
             btn.setTextoPrincipal(texto);
         }
     }
+    
+    /**
+     * Esta función borra el texto de un botón 
+     */
+    public void BorrarTextoCasilla()
+    {
+        for(BotonesTablaKenKen btn : botonesKenKen)
+        {
+            btn.BorrarTextoIndividual();
+        }
+    }
+    
+    /**
+     * Esta función borra el texto de todos los botones
+     */
+    public void BorrarTextoTotal()
+    {
+        for(BotonesTablaKenKen btn : botonesKenKen)
+        {
+            btn.Reinicio();
+        }
+    }
+    
+    /**
+     * Esta función retorna true si hay al menos un botón activo
+     */
+    public boolean AlMenosUnoActivo()
+    {
+        for(BotonesTablaKenKen btn : botonesKenKen)
+        {
+            if(btn.getEstadoActivo()){return true;};
+        }
+        return false;
+    }
+    
+    
+    /**
+     * Esta función valida la partida
+     */
+    public boolean validarJuego()
+    {
+        
+        List<String> valoresBotones = new ArrayList();//Esta lista almacena que hay en cada botón
+        
+        for(BotonesTablaKenKen btn : botonesKenKen)
+        {
+        
+            valoresBotones.add(btn.getTextoCentral());
+        
+        }
+        
+        for(int i = 1; i <= 36; i++)
+        {
+            int j = 1;
+            while(true)
+            {
+                if(valoresBotones.get(i) == valoresBotones.get(j) && j!=i)
+                {
+                    botonesKenKen.get(i).SetEstadoErr(true);
+                    botonesKenKen.get(i).SetEstadoErr(true);
+                    return true;
+                }
+                j++;
+                
+            }
+
+        }
+        return false;
+    }
+    
+
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          

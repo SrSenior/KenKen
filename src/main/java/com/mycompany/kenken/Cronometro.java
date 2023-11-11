@@ -9,11 +9,13 @@ import cronometro.MenuPrincipal;
 /**
  *
  * @author jpveg
+ * 
  */
 public class Cronometro {
 
     /**
      * @param args the command line arguments
+     * método principal
      */
     public static void main(String[] args) {
         MenuPrincipal ventana = new MenuPrincipal();

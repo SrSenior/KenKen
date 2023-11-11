@@ -39,10 +39,20 @@ public class BotonesTablaKenKen extends JButton
     
     }
 
+
     /**
      * Esta función pinta el fondo del botón si este se presiona o si tiene error
      * @param g 
      */
+
+    public void SetEstadoErr(boolean err) {
+        this.err = err;
+    }
+
+    
+    
+    //Esta función pinta el fondo del botón si este se presiona o si tiene error
+
     @Override
     protected void paintComponent(Graphics g) 
     {
@@ -166,6 +176,7 @@ public class BotonesTablaKenKen extends JButton
             if(textoSuperior == "")
             {
                 setText("<html><center>" + textoCentral + "</html>");
+                this.textoCentral = textoCentral;
             }
             else
             {
@@ -183,6 +194,41 @@ public class BotonesTablaKenKen extends JButton
         
         this.setText("<html><center>" + texto + "<br><br>" + " " + "</html>");
         textoSuperior = texto;
+    }
+
+    public String getTextoCentral() {
+        return textoCentral;
+    }
+    
+    
+    
+    public void BorrarTextoIndividual()
+    {
+        if(act)
+        {
+            if(textoSuperior == "")
+            {
+                setText("");
+            }
+            else
+            {
+                 this.setText("<html><center>" + textoSuperior + "<br><br>" + " " + "</html>");
+            }
+        }
+    }
+    
+    public void Reinicio()
+    {
+        
+        if(textoSuperior == "")
+        {
+            setText("");
+        }
+        else
+        {
+             this.setText("<html><center>" + textoSuperior + "<br><br>" + " " + "</html>");
+        }
+        
     }
 }
  

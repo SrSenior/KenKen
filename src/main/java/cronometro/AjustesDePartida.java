@@ -325,7 +325,9 @@ public class AjustesDePartida extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
-        boolean lado;
+        boolean lado, cronoTemp, noTiempo;
+        int horas, minutos, segundos;
+        String horasS, minutosS, segundosS;
         
         //Valida que haya al menos una opción seleccionada en cada posible rubro del menú pre-juego
         if((rbtnFacil.isSelected() || rbtnIntermedio.isSelected() || rbtnDificil.isSelected())
@@ -348,8 +350,21 @@ public class AjustesDePartida extends javax.swing.JFrame {
             if(rbtnDerecha.isSelected()){lado = true;}
             else{lado = false;}
             
+            if(rbtnCronometro.isSelected()){cronoTemp = true;}
+            else{cronoTemp = false;}
             
-            FrameJuego ventana_juego = new FrameJuego(dificultad, lado);//Se llama a la nueva ventana con la dificultad seleccionada
+            if(rbtnTiempo.isSelected()){noTiempo = true;}
+            else{noTiempo = false;}
+            
+            horasS = (String)comboHoras.getSelectedItem();
+            minutosS = (String)comboMinutos.getSelectedItem();
+            segundosS = (String)comboSegundos.getSelectedItem();
+            
+            horas = Integer.parseInt(horasS);
+            minutos = Integer.parseInt(minutosS);
+            segundos = Integer.parseInt(segundosS);
+            
+            FrameJuego ventana_juego = new FrameJuego(dificultad, lado, cronoTemp, noTiempo, horas, minutos, segundos);//Se llama a la nueva ventana con la dificultad seleccionada
             ventana_juego.setVisible(true);
             
             this.dispose();
