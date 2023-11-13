@@ -70,6 +70,7 @@ public class KenKenPanel extends javax.swing.JPanel {
         return matriz;
     }
 
+    
     public void setDificultad(String dificultad) 
     {
         this.dificultad = dificultad;
@@ -288,6 +289,7 @@ public class KenKenPanel extends javax.swing.JPanel {
         return false;
     }
     
+
 
     
     @SuppressWarnings("unchecked")
