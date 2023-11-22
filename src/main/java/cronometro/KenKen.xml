@@ -125,7 +125,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
         <jaula>2, /, (1, 3), (1, 4)</jaula>
         <jaula>9, +, (1, 5), (1, 6), (2, 5)</jaula>
         <jaula>12, *, (2, 2), (2, 3), (2, 4)</jaula>
-        <jaula>13, +, (2, 6), (3, 5), (4, 5)</jaula>
+        <jaula>13, +, (2, 6), (3, 6), (4, 6)</jaula>
         <jaula>2, -, (3, 1), (3, 2)</jaula>
         <jaula>11, +, (3, 3), (3, 4), (4, 3)</jaula>
         <jaula>6, +, (3, 5), (4, 4), (4, 5)</jaula>
@@ -157,9 +157,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
         <jaula>10, +, (1, 2), (2, 2), (3, 2)</jaula>
         <jaula>9, +, (1, 3), (1, 4), (1, 5)</jaula>
         <jaula>2, -, (1, 6), (2, 6)</jaula>
-        <jaula>1, -, (2, 3), (4, 3)</jaula>
+        <jaula>1, -, (2, 3), (3, 3)</jaula>
         <jaula>11, +, (2, 4), (2, 5), (3, 5)</jaula>
-        <jaula>9, +, (3, 4), (4, 4), (5, 5)</jaula>
+        <jaula>9, +, (3, 4), (4, 4), (5, 4)</jaula>
         <jaula>1, -, (4, 1), (4, 2)</jaula>
         <jaula>3, +, (4, 3), (5, 3)</jaula>
         <jaula>7, +, (4, 5), (5, 5)</jaula>

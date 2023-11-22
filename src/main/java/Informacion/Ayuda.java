@@ -16,7 +16,7 @@ public class Ayuda {
     
     public static void abrirManual(){
         try {
-            String ruta= "Ruta";
+            String ruta= "Manual de usuario.docx";
             File file = new File(ruta);
             if (file.exists()){
                 if (Desktop.isDesktopSupported()){
