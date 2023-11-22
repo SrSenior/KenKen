@@ -127,6 +127,7 @@ public class FrameJuego extends javax.swing.JFrame {
         jPanel7.setVisible(false);
         jPanel5.setVisible(false);
         jPanel4.setVisible(false);
+        jPanel8.setVisible(false);
         panelErrores.setVisible(false);
         panelNoErrores.setVisible(false);
         kenKenPanel1.QuitarEstadoError();
@@ -150,7 +151,8 @@ public class FrameJuego extends javax.swing.JFrame {
                 !jPanel5.isVisible() ||
                 !jPanel4.isVisible() ||
                 !panelErrores.isVisible() ||
-                !panelNoErrores.isVisible())
+                !panelNoErrores.isVisible() ||
+                !jPanel8.isVisible())
         {
             return true;
         }
@@ -223,6 +225,11 @@ public class FrameJuego extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         panelErrores = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jButton19 = new javax.swing.JButton();
+        jButton20 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(800, 500));
@@ -653,7 +660,7 @@ public class FrameJuego extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 170, 90));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(365, 540, 170, 90));
 
         jPanel5.setBackground(new java.awt.Color(255, 153, 153));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -705,14 +712,14 @@ public class FrameJuego extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 530, 170, 90));
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(365, 540, 170, 90));
 
         jPanel6.setBackground(new java.awt.Color(0, 105, 192));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel6.add(cronoLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 140, 30));
-        jPanel6.add(tempLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 140, 30));
+        jPanel6.add(cronoLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 120, 30));
+        jPanel6.add(tempLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 120, 30));
 
-        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 520, 140, 50));
+        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 490, 170, 50));
 
         jPanel7.setBackground(new java.awt.Color(255, 153, 153));
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -734,7 +741,7 @@ public class FrameJuego extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 530, 150, 30));
+        jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(365, 540, 150, 30));
 
         kenKenPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         kenKenPanel1.setMinimumSize(new java.awt.Dimension(0, 0));
@@ -760,7 +767,7 @@ public class FrameJuego extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        jPanel1.add(panelNoErrores, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 570, 150, 70));
+        jPanel1.add(panelNoErrores, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 570, 150, 70));
 
         panelErrores.setBackground(new java.awt.Color(255, 153, 153));
         panelErrores.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -782,7 +789,59 @@ public class FrameJuego extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        jPanel1.add(panelErrores, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 570, 150, 70));
+        jPanel1.add(panelErrores, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 570, 150, 70));
+
+        jPanel8.setBackground(new java.awt.Color(255, 153, 153));
+        jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("¿Seguro que quiere terminar ");
+
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("la partida?");
+
+        jButton19.setText("No");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+
+        jButton20.setText("Si");
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
+            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton20)
+                    .addComponent(jButton19))
+                .addContainerGap())
+        );
+
+        jPanel1.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(365, 540, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -801,10 +860,17 @@ public class FrameJuego extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
         //Si se presiona el botón de salir, regresa al menú principal
-        MenuPrincipal ventana_menu = new MenuPrincipal();
-        ventana_menu.setVisible(true);
         
-        this.dispose();
+        DesactivarElementos();
+        
+        if(EstanActivos())
+            {
+                jPanel8.setVisible(true);
+            }
+            else
+            {
+                DesactivarElementos();
+            }
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -915,10 +981,16 @@ public class FrameJuego extends javax.swing.JFrame {
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         
         //Si se presiona el botón de salir, regresa al menú principal
-        MenuPrincipal ventana_menu = new MenuPrincipal();
-        ventana_menu.setVisible(true);
+        DesactivarElementos();
         
-        this.dispose();
+        if(EstanActivos())
+            {
+                jPanel8.setVisible(true);
+            }
+            else
+            {
+                DesactivarElementos();
+            }
 
     }//GEN-LAST:event_jButton9ActionPerformed
 
@@ -1052,6 +1124,19 @@ public class FrameJuego extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn18ActionPerformed
 
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        DesactivarElementos();
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        
+        MenuPrincipal ventana_menu = new MenuPrincipal();
+        ventana_menu.setVisible(true);
+        
+        this.dispose();
+        
+    }//GEN-LAST:event_jButton20ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PanelBtnDer;
     private javax.swing.JPanel PanelBtnIzq;
@@ -1084,7 +1169,9 @@ public class FrameJuego extends javax.swing.JFrame {
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -1099,6 +1186,8 @@ public class FrameJuego extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -1106,6 +1195,7 @@ public class FrameJuego extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private TablaKenKen.KenKenPanel kenKenPanel1;
     private javax.swing.JPanel panelErrores;
     private javax.swing.JPanel panelNoErrores;
