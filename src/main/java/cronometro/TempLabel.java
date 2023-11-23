@@ -102,6 +102,15 @@ public class TempLabel extends javax.swing.JLabel {
     }
     
     /**
+     * Puede reanudar el temporizador
+     */
+    public void reanudarTemporizador(){
+        
+        temporizador.setPausa(false);
+        
+    }
+    
+    /**
      * Mantiene coherencia para el formato de los numeros, agregando un 0 antes si es menos a 10 y pasandolo a string
      * @param tiempo minutos, segundo u horas
      * @return String

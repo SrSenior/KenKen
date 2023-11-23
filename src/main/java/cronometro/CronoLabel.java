@@ -78,6 +78,15 @@ public class CronoLabel extends javax.swing.JLabel {
     }
     
     /**
+     * Metodo que reanuda el cronometro
+     */
+    public void reanudarCronometro(){
+        
+        cronometro.setPausa(false);
+        
+    }
+    
+    /**
      * Metodo que revisa si uno de los datos es menos a 10 para poder asignar un 0 antes de este, ademas lo pasa a String
      * @param tiempo Es el dato del atributo segundos, minutos u horas
      * @return Un string con el tiempo en nuevo formato

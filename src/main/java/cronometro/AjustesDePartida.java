@@ -201,13 +201,13 @@ public class AjustesDePartida extends javax.swing.JFrame {
         rbtnDerecha.setBackground(new java.awt.Color(255, 255, 255));
         btngPosicion.add(rbtnDerecha);
         rbtnDerecha.setForeground(new java.awt.Color(0, 105, 192));
-        rbtnDerecha.setText("Derecha");
+        rbtnDerecha.setText("Izquierda");
         jPanel1.add(rbtnDerecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, -1, -1));
 
         rbtnIzquierda.setBackground(new java.awt.Color(255, 255, 255));
         btngPosicion.add(rbtnIzquierda);
         rbtnIzquierda.setForeground(new java.awt.Color(0, 105, 192));
-        rbtnIzquierda.setText("Izquierda");
+        rbtnIzquierda.setText("Derecha");
         jPanel1.add(rbtnIzquierda, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, -1, -1));
 
         rbtnSiSonido.setBackground(new java.awt.Color(255, 255, 255));

@@ -338,6 +338,25 @@ public class KenKenPanel extends javax.swing.JPanel {
         return false;
     }
     
+    /*
+    * Función que se encargará de manipular el valor de si las casillas están en blanco o no
+    * @param modo si es true, se pintan las casillas para indicarle al jugador que quedan casillas sin llenar, si está en false, se despintan
+    */
+    public void casillasEnBlanco(boolean modo)
+    {
+        for(BotonesTablaKenKen btn : botonesKenKen)
+        {
+            if(btn.getTextoCentral() == "" && modo)
+            {
+                btn.setCasillaBlanco(true);
+            }
+            else
+            {
+                btn.setCasillaBlanco(false);
+            }
+        }
+    }
+    
     public void QuitarEstadoError()
     {
         for(BotonesTablaKenKen btn : botonesKenKen)

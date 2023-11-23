@@ -63,7 +63,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="380" y="510" width="150" height="30"/>
+              <AbsoluteConstraints x="30" y="490" width="150" height="30"/>
             </Constraint>
           </Constraints>
 
@@ -650,7 +650,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="190" y="550" width="170" height="90"/>
+              <AbsoluteConstraints x="10" y="550" width="170" height="90"/>
             </Constraint>
           </Constraints>
 
@@ -862,7 +862,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="370" y="550" width="-1" height="-1"/>
+              <AbsoluteConstraints x="190" y="550" width="350" height="-1"/>
             </Constraint>
           </Constraints>
 
@@ -876,7 +876,7 @@
                       <Component id="jButton19" min="-2" pref="59" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jLabel8" alignment="0" pref="168" max="32767" attributes="0"/>
+                  <Component id="jLabel8" alignment="0" pref="348" max="32767" attributes="0"/>
                   <Component id="jLabel9" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
@@ -901,13 +901,13 @@
             <Component class="javax.swing.JLabel" name="jLabel8">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="&#xbf;Seguro que quiere terminar "/>
+                <Property name="text" type="java.lang.String" value="&#xbf;Seguro que quiere terminar la partida?"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel9">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="la partida?"/>
+                <Property name="text" type="java.lang.String" value="Si quedan casillas sin llenar, la partida no estar&#xe1; en el podio"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton19">

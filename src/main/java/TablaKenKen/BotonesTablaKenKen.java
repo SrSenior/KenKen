@@ -19,11 +19,10 @@ import javax.swing.JButton;
  * @author Jose Pablo Vega
  */
 
-
 public class BotonesTablaKenKen extends JButton
 {
     //Atributos del botón
-    private boolean act, err; //Atributo para colorearlo en caso de estar seleccionado o en caso de tener error
+    private boolean act, err, blanc; //Atributo para colorearlo en caso de estar seleccionado, en caso de tener error o en caso de estar en blanco
     private String textoSuperior = "";
     private String textoCentral = "";
     private String textoLimpio = "";
@@ -40,14 +39,17 @@ public class BotonesTablaKenKen extends JButton
     
     }
 
-
-    
-
     public void SetEstadoErr(boolean err) {
         this.err = err;
     }
 
-    
+    /*
+    *Función para activar o desactivar el atributo que indica si está o no en blanco la casilla
+    * @param blanc valor que se le dará al atributo
+    */
+    public void setCasillaBlanco(boolean blanc) {
+        this.blanc = blanc;
+    }
     
     /**
      * Esta función pinta el fondo del botón si este se presiona o si tiene error
@@ -62,6 +64,15 @@ public class BotonesTablaKenKen extends JButton
             err = false;
             Graphics2D g2 = (Graphics2D) g;
             g2.setColor(new Color(219, 211, 244));
+            g2.fillRoundRect(0, 0, getWidth(), getHeight(), 13, 13);
+            
+        }
+        
+        if(blanc)
+        {
+            
+            Graphics2D g2 = (Graphics2D) g;
+            g2.setColor(new Color(253, 250, 221));
             g2.fillRoundRect(0, 0, getWidth(), getHeight(), 13, 13);
             
         }
@@ -201,7 +212,13 @@ public class BotonesTablaKenKen extends JButton
         return textoCentral;
     }
     
-    
+    /*
+    * Función que retorna una valor booleano según si el botón está en blanco o no
+    */
+    public boolean getEnBlanco()
+    {
+        return blanc;
+    }
     
     public void BorrarTextoIndividual()
     {

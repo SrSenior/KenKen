@@ -131,6 +131,7 @@ public class FrameJuego extends javax.swing.JFrame {
         panelErrores.setVisible(false);
         panelNoErrores.setVisible(false);
         kenKenPanel1.QuitarEstadoError();
+        kenKenPanel1.casillasEnBlanco(false);//Se despintan los botones en blanco para mantener la vista más uniforme
     }
     
     public static void reproducir()throws Exception
@@ -258,7 +259,7 @@ public class FrameJuego extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 510, 150, 30));
+        jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, 150, 30));
 
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -734,7 +735,7 @@ public class FrameJuego extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 550, 170, 90));
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 550, 170, 90));
 
         jPanel6.setBackground(new java.awt.Color(0, 105, 192));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -795,10 +796,10 @@ public class FrameJuego extends javax.swing.JFrame {
         jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("¿Seguro que quiere terminar ");
+        jLabel8.setText("¿Seguro que quiere terminar la partida?");
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("la partida?");
+        jLabel9.setText("Si quedan casillas sin llenar, la partida no estará en el podio");
 
         jButton19.setText("No");
         jButton19.addActionListener(new java.awt.event.ActionListener() {
@@ -824,7 +825,7 @@ public class FrameJuego extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
+            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 348, Short.MAX_VALUE)
             .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel8Layout.setVerticalGroup(
@@ -841,7 +842,7 @@ public class FrameJuego extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel1.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 550, -1, -1));
+        jPanel1.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 550, 350, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -866,6 +867,9 @@ public class FrameJuego extends javax.swing.JFrame {
         if(EstanActivos())
             {
                 jPanel8.setVisible(true);
+                cronoLabel2.pausarCronometro();
+                tempLabel1.pausarTemporizador();
+                kenKenPanel1.casillasEnBlanco(true); //Se pintan los botones en blanco para indicarle al jugador
             }
             else
             {
@@ -986,6 +990,9 @@ public class FrameJuego extends javax.swing.JFrame {
         if(EstanActivos())
             {
                 jPanel8.setVisible(true);
+                cronoLabel2.pausarCronometro();
+                tempLabel1.pausarTemporizador();
+                kenKenPanel1.casillasEnBlanco(true); //Se pintan los botones en blanco para indicarle al jugador
             }
             else
             {
@@ -1078,7 +1085,18 @@ public class FrameJuego extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        
         DesactivarElementos();
+        
+        if(kenKenPanel1.validarJuego())
+        {
+            panelErrores.setVisible(true);
+        }
+        else
+        {
+            panelNoErrores.setVisible(true);
+        }
+        
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
@@ -1126,6 +1144,8 @@ public class FrameJuego extends javax.swing.JFrame {
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
         DesactivarElementos();
+        cronoLabel2.reanudarCronometro();
+        tempLabel1.reanudarTemporizador();
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
