@@ -179,6 +179,7 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="1"/>
                     <Property name="enabled" type="boolean" value="false"/>
+                    <Property name="opaque" type="boolean" value="true"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn7ActionPerformed"/>
@@ -188,6 +189,7 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="2"/>
                     <Property name="enabled" type="boolean" value="false"/>
+                    <Property name="opaque" type="boolean" value="true"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn8ActionPerformed"/>
@@ -197,6 +199,7 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="3"/>
                     <Property name="enabled" type="boolean" value="false"/>
+                    <Property name="opaque" type="boolean" value="true"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn9ActionPerformed"/>
@@ -206,6 +209,7 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="4"/>
                     <Property name="enabled" type="boolean" value="false"/>
+                    <Property name="opaque" type="boolean" value="true"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn10ActionPerformed"/>
@@ -215,6 +219,7 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="5"/>
                     <Property name="enabled" type="boolean" value="false"/>
+                    <Property name="opaque" type="boolean" value="true"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn11ActionPerformed"/>
@@ -224,6 +229,7 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="6"/>
                     <Property name="enabled" type="boolean" value="false"/>
+                    <Property name="opaque" type="boolean" value="true"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn12ActionPerformed"/>
@@ -233,6 +239,7 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="7"/>
                     <Property name="enabled" type="boolean" value="false"/>
+                    <Property name="opaque" type="boolean" value="true"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn13ActionPerformed"/>
@@ -242,6 +249,7 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="8"/>
                     <Property name="enabled" type="boolean" value="false"/>
+                    <Property name="opaque" type="boolean" value="true"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn14ActionPerformed"/>
@@ -251,6 +259,7 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="9"/>
                     <Property name="enabled" type="boolean" value="false"/>
+                    <Property name="opaque" type="boolean" value="true"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn15ActionPerformed"/>
@@ -420,6 +429,7 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="1"/>
                     <Property name="enabled" type="boolean" value="false"/>
+                    <Property name="opaque" type="boolean" value="true"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn1ActionPerformed"/>
@@ -429,6 +439,7 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="2"/>
                     <Property name="enabled" type="boolean" value="false"/>
+                    <Property name="opaque" type="boolean" value="true"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn2ActionPerformed"/>
@@ -438,6 +449,7 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="3"/>
                     <Property name="enabled" type="boolean" value="false"/>
+                    <Property name="opaque" type="boolean" value="true"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn3ActionPerformed"/>
@@ -447,6 +459,7 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="4"/>
                     <Property name="enabled" type="boolean" value="false"/>
+                    <Property name="opaque" type="boolean" value="true"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn4ActionPerformed"/>
@@ -456,6 +469,7 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="5"/>
                     <Property name="enabled" type="boolean" value="false"/>
+                    <Property name="opaque" type="boolean" value="true"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn5ActionPerformed"/>
@@ -465,6 +479,7 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="6"/>
                     <Property name="enabled" type="boolean" value="false"/>
+                    <Property name="opaque" type="boolean" value="true"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn6ActionPerformed"/>
@@ -474,6 +489,7 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="7"/>
                     <Property name="enabled" type="boolean" value="false"/>
+                    <Property name="opaque" type="boolean" value="true"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn16ActionPerformed"/>
@@ -483,6 +499,7 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="8"/>
                     <Property name="enabled" type="boolean" value="false"/>
+                    <Property name="opaque" type="boolean" value="true"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn17ActionPerformed"/>
@@ -492,6 +509,7 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="9"/>
                     <Property name="enabled" type="boolean" value="false"/>
+                    <Property name="opaque" type="boolean" value="true"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn18ActionPerformed"/>
@@ -862,7 +880,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="190" y="550" width="350" height="-1"/>
+              <AbsoluteConstraints x="230" y="550" width="280" height="-1"/>
             </Constraint>
           </Constraints>
 
@@ -876,7 +894,7 @@
                       <Component id="jButton19" min="-2" pref="59" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jLabel8" alignment="0" pref="348" max="32767" attributes="0"/>
+                  <Component id="jLabel8" alignment="0" pref="278" max="32767" attributes="0"/>
                   <Component id="jLabel9" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
@@ -907,7 +925,7 @@
             <Component class="javax.swing.JLabel" name="jLabel9">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Si quedan casillas sin llenar, la partida no estar&#xe1; en el podio"/>
+                <Property name="text" type="java.lang.String" value="Las partidas sin reloj no estar&#xe1;n en el podio"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton19">

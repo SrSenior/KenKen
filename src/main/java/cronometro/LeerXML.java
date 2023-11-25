@@ -26,13 +26,15 @@ public class LeerXML {
     private List<JaulasKenKen> jaulasList;
     private List<Partida> listaPartidas;
     private String XMLRuta;
+    private int tamaño;
     
      /**
      * Metodo constructor
      */
-    public LeerXML() 
+    public LeerXML(int tamaño) 
     {
         //Se inicializan los valores
+        this.tamaño = tamaño;
         jaulasList = new ArrayList<>();
         listaPartidas = new ArrayList<>();
         XMLRuta = "src/main/java/cronometro/KenKen.xml";
@@ -117,7 +119,7 @@ public class LeerXML {
                                 int row = Integer.parseInt(coordenadaArray[0].trim()) - 1; // Restar 1 para ajustar a ArrayList
                                 int col = Integer.parseInt(coordenadaArray[1].trim()) - 1; // Restar 1 para ajustar a ArrayList
 
-                                int index = row * 6 + col; // Calcular el índice en ArrayList
+                                int index = row * tamaño + col; // Calcular el índice en ArrayList
                                 
                                 //Se almacenan los valores en la variable "coordenadas"
                                 coordenadas.add(index);
@@ -141,20 +143,12 @@ public class LeerXML {
                     //Se crea un elemento partida en el que almacenamos la lisa de jaulas previamente creada
                     Partida partida = new Partida(nivelDificultad, new ArrayList<>(jaulasList));
                     
-                    for(JaulasKenKen jaula : jaulasList)
-                    {
-                        System.out.println("\nValor: " + jaula.getValor());
-                        System.out.println("Operación: " + jaula.getOperacion());
-                    }
-                    
                     //Se añade la partida a la lista de partidas
                     listaPartidas.add(partida);
                     
                 }
                 
             }
-            
-            
             
         } 
         catch (Exception e) 

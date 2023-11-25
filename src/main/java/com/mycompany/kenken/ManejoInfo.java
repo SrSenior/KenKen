@@ -36,9 +36,9 @@ public class ManejoInfo
      * Función para retornar la lista de las partidas
      * @return 
      */
-    public static List<Partida> getPartidas() 
+    public static List<Partida> getPartidas(int tamaño) 
     {
-        LeerXML lectura = new LeerXML();
+        LeerXML lectura = new LeerXML(tamaño);
         listaPartidas = lectura.getListaPartidas();
         
         return listaPartidas;

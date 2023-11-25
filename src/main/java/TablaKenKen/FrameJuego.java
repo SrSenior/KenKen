@@ -7,6 +7,7 @@ package TablaKenKen;
 import cronometro.AjustesDePartida;
 import cronometro.MenuPrincipal;
 import cronometro.TempLabel;
+import cronometro.VentanaGanador;
 import java.awt.GridLayout;
 
 import java.io.FileInputStream;
@@ -26,17 +27,21 @@ public class FrameJuego extends javax.swing.JFrame {
      * Creates new form FrameJuego
      * @param dificultad es la dificultad según la que deplegamos las jaulas
      */
-    private boolean confirmarReinicio = false;
+    private boolean confirmarReinicio = false, noTiempo;
     private int tamaño;
+    private String dificultad;
     private ArrayList<JButton> botonesIzq = new ArrayList();
     private ArrayList<JButton> botonesDer = new ArrayList();
     
     public FrameJuego(String dificultad, boolean lado, boolean cronoTemp, boolean noTiempo, int horas, int minutos, int segundos, int tamaño) 
     {
         this.tamaño = tamaño;
+        this.noTiempo = noTiempo;
         initComponents();
-        kenKenPanel1.setSizeCuadricula(tamaño);//Se agrega el tamaño de la tabla
         kenKenPanel1.setLayout(new GridLayout(tamaño, tamaño));
+        kenKenPanel1.setSizeCuadricula(tamaño);//Se agrega el tamaño de la tabla
+        
+        this.dificultad = dificultad;
         kenKenPanel1.setDificultad(dificultad);//Se agrega la dificultad elegida
         kenKenPanel1.PintarBordesBotones();//Se repintan los bordes con la nueva dificultad
         if(lado)
@@ -268,6 +273,7 @@ public class FrameJuego extends javax.swing.JFrame {
 
         btn7.setText("1");
         btn7.setEnabled(false);
+        btn7.setOpaque(true);
         btn7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn7ActionPerformed(evt);
@@ -277,6 +283,7 @@ public class FrameJuego extends javax.swing.JFrame {
 
         btn8.setText("2");
         btn8.setEnabled(false);
+        btn8.setOpaque(true);
         btn8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn8ActionPerformed(evt);
@@ -286,6 +293,7 @@ public class FrameJuego extends javax.swing.JFrame {
 
         btn9.setText("3");
         btn9.setEnabled(false);
+        btn9.setOpaque(true);
         btn9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn9ActionPerformed(evt);
@@ -295,6 +303,7 @@ public class FrameJuego extends javax.swing.JFrame {
 
         btn10.setText("4");
         btn10.setEnabled(false);
+        btn10.setOpaque(true);
         btn10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn10ActionPerformed(evt);
@@ -304,6 +313,7 @@ public class FrameJuego extends javax.swing.JFrame {
 
         btn11.setText("5");
         btn11.setEnabled(false);
+        btn11.setOpaque(true);
         btn11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn11ActionPerformed(evt);
@@ -313,6 +323,7 @@ public class FrameJuego extends javax.swing.JFrame {
 
         btn12.setText("6");
         btn12.setEnabled(false);
+        btn12.setOpaque(true);
         btn12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn12ActionPerformed(evt);
@@ -322,6 +333,7 @@ public class FrameJuego extends javax.swing.JFrame {
 
         btn13.setText("7");
         btn13.setEnabled(false);
+        btn13.setOpaque(true);
         btn13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn13ActionPerformed(evt);
@@ -331,6 +343,7 @@ public class FrameJuego extends javax.swing.JFrame {
 
         btn14.setText("8");
         btn14.setEnabled(false);
+        btn14.setOpaque(true);
         btn14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn14ActionPerformed(evt);
@@ -340,6 +353,7 @@ public class FrameJuego extends javax.swing.JFrame {
 
         btn15.setText("9");
         btn15.setEnabled(false);
+        btn15.setOpaque(true);
         btn15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn15ActionPerformed(evt);
@@ -461,6 +475,7 @@ public class FrameJuego extends javax.swing.JFrame {
 
         btn1.setText("1");
         btn1.setEnabled(false);
+        btn1.setOpaque(true);
         btn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn1ActionPerformed(evt);
@@ -470,6 +485,7 @@ public class FrameJuego extends javax.swing.JFrame {
 
         btn2.setText("2");
         btn2.setEnabled(false);
+        btn2.setOpaque(true);
         btn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn2ActionPerformed(evt);
@@ -479,6 +495,7 @@ public class FrameJuego extends javax.swing.JFrame {
 
         btn3.setText("3");
         btn3.setEnabled(false);
+        btn3.setOpaque(true);
         btn3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn3ActionPerformed(evt);
@@ -488,6 +505,7 @@ public class FrameJuego extends javax.swing.JFrame {
 
         btn4.setText("4");
         btn4.setEnabled(false);
+        btn4.setOpaque(true);
         btn4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn4ActionPerformed(evt);
@@ -497,6 +515,7 @@ public class FrameJuego extends javax.swing.JFrame {
 
         btn5.setText("5");
         btn5.setEnabled(false);
+        btn5.setOpaque(true);
         btn5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn5ActionPerformed(evt);
@@ -506,6 +525,7 @@ public class FrameJuego extends javax.swing.JFrame {
 
         btn6.setText("6");
         btn6.setEnabled(false);
+        btn6.setOpaque(true);
         btn6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn6ActionPerformed(evt);
@@ -515,6 +535,7 @@ public class FrameJuego extends javax.swing.JFrame {
 
         btn16.setText("7");
         btn16.setEnabled(false);
+        btn16.setOpaque(true);
         btn16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn16ActionPerformed(evt);
@@ -524,6 +545,7 @@ public class FrameJuego extends javax.swing.JFrame {
 
         btn17.setText("8");
         btn17.setEnabled(false);
+        btn17.setOpaque(true);
         btn17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn17ActionPerformed(evt);
@@ -533,6 +555,7 @@ public class FrameJuego extends javax.swing.JFrame {
 
         btn18.setText("9");
         btn18.setEnabled(false);
+        btn18.setOpaque(true);
         btn18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn18ActionPerformed(evt);
@@ -799,7 +822,7 @@ public class FrameJuego extends javax.swing.JFrame {
         jLabel8.setText("¿Seguro que quiere terminar la partida?");
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("Si quedan casillas sin llenar, la partida no estará en el podio");
+        jLabel9.setText("Las partidas sin reloj no estarán en el podio");
 
         jButton19.setText("No");
         jButton19.addActionListener(new java.awt.event.ActionListener() {
@@ -825,7 +848,7 @@ public class FrameJuego extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 348, Short.MAX_VALUE)
+            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
             .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel8Layout.setVerticalGroup(
@@ -842,7 +865,7 @@ public class FrameJuego extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel1.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 550, 350, -1));
+        jPanel1.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 550, 280, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1065,9 +1088,10 @@ public class FrameJuego extends javax.swing.JFrame {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         DesactivarElementos();
         
-        if(kenKenPanel1.validarJuego())
+        if(kenKenPanel1.validarRepetidosJuego() || !kenKenPanel1.ValidarResultadosJaulas())
         {
             panelErrores.setVisible(true);
+            kenKenPanel1.casillasEnBlanco(true); //Se pintan los botones en blanco para indicarle al jugador
         }
         else
         {
@@ -1088,7 +1112,7 @@ public class FrameJuego extends javax.swing.JFrame {
         
         DesactivarElementos();
         
-        if(kenKenPanel1.validarJuego())
+        if(kenKenPanel1.validarRepetidosJuego())
         {
             panelErrores.setVisible(true);
         }
@@ -1101,6 +1125,7 @@ public class FrameJuego extends javax.swing.JFrame {
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         kenKenPanel1.BorrarTextoTotal();
+        DesactivarElementos();
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
@@ -1150,14 +1175,32 @@ public class FrameJuego extends javax.swing.JFrame {
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
         
-        if(kenKenPanel1.validarJuego())
+        int tiempoH, tiempoM, tiempoS;
+        String tiempoTotal;
+        
+        if(kenKenPanel1.validarRepetidosJuego() || !kenKenPanel1.ValidarResultadosJaulas())
         {
             panelErrores.setVisible(true);
         }
         else
         {
-            MenuPrincipal ventana_menu = new MenuPrincipal();
-            ventana_menu.setVisible(true);
+            
+            if(noTiempo)//Las partidas sin reloj no entran en podio
+            {
+                MenuPrincipal ventana_menu = new MenuPrincipal();
+                ventana_menu.setVisible(true);
+            }
+            else
+            {
+                tiempoH = cronoLabel2.getHoras();
+                tiempoM = cronoLabel2.getMinutos();
+                tiempoS = cronoLabel2.getSegundos();
+
+                tiempoTotal = String.format("%02d:%02d:%02d", tiempoH, tiempoM, tiempoS);
+
+                VentanaGanador ventanaGanador = new VentanaGanador(tiempoTotal, tamaño, dificultad);
+                ventanaGanador.setVisible(true);
+            }
         
             this.dispose();
         }

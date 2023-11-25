@@ -79,6 +79,7 @@ public class AjustesDePartida extends javax.swing.JFrame {
         lblSeleccionarTiempo = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         panelError = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         comboHoras = new javax.swing.JComboBox<>();
         comboMinutos = new javax.swing.JComboBox<>();
         comboSegundos = new javax.swing.JComboBox<>();
@@ -239,6 +240,12 @@ public class AjustesDePartida extends javax.swing.JFrame {
 
         panelError.setBackground(new java.awt.Color(221, 65, 84));
         panelError.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Seleccione al menos una alternativa de cada opción");
+        panelError.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
         jPanel1.add(panelError, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 450, 340, 30));
 
         comboHoras.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5" }));
@@ -439,6 +446,7 @@ public class AjustesDePartida extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> comboTamaño;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel labelTextoError;
     private javax.swing.JLabel lblDificultad;
