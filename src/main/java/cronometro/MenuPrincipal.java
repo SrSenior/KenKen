@@ -6,9 +6,15 @@ import static Informacion.Ayuda.abrirManual;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 
-
+/**
+ * Frame del menú principal
+ * @author Kenneth Vargas Chacón
+ */
 public class MenuPrincipal extends javax.swing.JFrame {
-
+    
+    /**
+     * Constructor
+     */
     public MenuPrincipal() {
         initComponents();
         try{
@@ -149,7 +155,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAcercadeActionPerformed
 
     private void btnPodioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPodioActionPerformed
-        SeleccionarPodio selecion = new SeleccionarPodio();
+        FrameSeleccionarPodio selecion = new FrameSeleccionarPodio();
         selecion.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnPodioActionPerformed

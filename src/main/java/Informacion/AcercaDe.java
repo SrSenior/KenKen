@@ -5,8 +5,8 @@
 package Informacion;
 
 /**
- *
- * @author kenne
+ *Clase que muestra la info
+ * @author Kenneth Vargas Chacon
  */
 public class AcercaDe extends javax.swing.JFrame {
 
@@ -81,7 +81,7 @@ public class AcercaDe extends javax.swing.JFrame {
 
         lblVersion.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblVersion.setForeground(new java.awt.Color(255, 255, 255));
-        lblVersion.setText("Versión 1.0.0");
+        lblVersion.setText("Versión 2.0.0");
 
         lblAutores.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblAutores.setForeground(new java.awt.Color(255, 255, 255));
@@ -101,7 +101,7 @@ public class AcercaDe extends javax.swing.JFrame {
 
         lblFecha2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblFecha2.setForeground(new java.awt.Color(255, 255, 255));
-        lblFecha2.setText("08-1-2023");
+        lblFecha2.setText("26-11-2023");
 
         lblCurso.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblCurso.setForeground(new java.awt.Color(255, 255, 255));

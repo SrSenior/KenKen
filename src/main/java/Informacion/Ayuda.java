@@ -13,7 +13,15 @@ import java.io.IOException;
  * @author Jose Pablo Vega Solano
  */
 public class Ayuda {
-    
+    /**
+     * Constructor
+     */
+    public Ayuda(){
+        
+    }
+    /**
+     * Funcion que abre el manual
+     */
     public static void abrirManual(){
         try {
             String ruta= "Manual de usuario.docx";

@@ -19,8 +19,8 @@ public class Partida {
 
     /**
      * Constructor
-     * @param nivelDificultad
-     * @param jaulas 
+     * @param nivelDificultad Selecciona un nivel de dificultad para elegir una partida
+     * @param jaulas Crea una lista de jaulas para armar el tablero
      */
     public Partida(String nivelDificultad, List<JaulasKenKen> jaulas) 
     {
@@ -32,7 +32,7 @@ public class Partida {
     
     /**
      * Setter de nivelDificultad
-     * @param nivelDificultad 
+     * @param nivelDificultad Selecciona al dificultad para que sea facil buscar una partida de esta misma
      */
     public void setNivelDificultad(String nivelDificultad) 
     {
@@ -41,7 +41,7 @@ public class Partida {
 
     /**
      * Setter de jaulas
-     * @param jaulas 
+     * @param jaulas Asigna el valor de la lista de jaulas ya hecha a esta partida
      */
     public void setJaulas(List<JaulasKenKen> jaulas) {
         this.jaulas = jaulas;
@@ -49,7 +49,7 @@ public class Partida {
 
     /**
      * Getter de getnivelDificultad
-     * @return String
+     * @return String Retorna el nivel de dificultad
      */
     public String getNivelDificultad() {
         return nivelDificultad;
@@ -57,7 +57,7 @@ public class Partida {
 
     /**
      * Getter de una lista que es de Jaulas
-     * @return  lista de Jaulas
+     * @return  Retorna la lista de jaulas
      */
     public List<JaulasKenKen> getJaulas() {
         return jaulas;

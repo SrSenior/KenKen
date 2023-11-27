@@ -34,7 +34,8 @@ public class ManejoInfo
 
     /**
      * Función para retornar la lista de las partidas
-     * @return 
+     * @param tamaño Tamaño de la cuadricula
+     * @return Retorna todas las partidas disponibles
      */
     public static List<Partida> getPartidas(int tamaño) 
     {
@@ -47,7 +48,7 @@ public class ManejoInfo
 
     /**
      * Setter de lista
-     * @param listaPartidas 
+     * @param listaPartidas Asigna las partidas
      */
     public static void setListaPartidas(List<Partida> listaPartidas) {
         ManejoInfo.listaPartidas = listaPartidas;

@@ -20,12 +20,15 @@ public class VentanaGanador extends javax.swing.JFrame {
     private int segundos;
     private int tamaño;
     private String dificultad;
-    public Nivel niveljugado;
+    //public Nivel niveljugado;
     /**
-     * Creates new form ventanaGanador
-     * @param tiempo se usa para indicarle al jugador cuanto demoró en su partida
-     * @param tamaño se usa para saber el tamaño de la cuadrícula en que el jugador jugaba, esto para saber en que podio va
-     * @param dificultad se usa para saber la dificultad de la partida y saber en que podio meter al jugador
+     * Constructor
+     * @param tiempo Tiempo
+     * @param horas Horas
+     * @param minutos   Minutos
+     * @param segundos  Segundos
+     * @param tamaño tamaño
+     * @param dificultad  dificultad
      */
     public VentanaGanador(String tiempo, int horas, int minutos, int segundos, int tamaño, String dificultad) 
     {
@@ -215,7 +218,7 @@ public class VentanaGanador extends javax.swing.JFrame {
                  }else switch (dificultad) {
                 case "Facil":
                     ListaNiveles.getNivel3x3().addfacil(jugador);
-                    //System.out.println(ListaNiveles.getNivel3x3().imprimirListaNivel(ListaNiveles.getNivel3x3().getListaFacil()));
+                    System.out.println(ListaNiveles.getNivel3x3().imprimirListaNivel(ListaNiveles.getNivel3x3().getListaFacil()));
                     break;
                 case "Intermedio":
                     ListaNiveles.getNivel3x3().addMedio(jugador);
@@ -326,6 +329,8 @@ public class VentanaGanador extends javax.swing.JFrame {
                 System.out.println("Hola mundo");
                 break;
         }
+        System.out.println(ListaNiveles.getNivel3x3().imprimirListaNivel(ListaNiveles.getNivel3x3().getListaFacil()));
+        
         FileManager.writeObject(new PaqueteNiveles(), "kenken2023podio.dat");
         
         MenuPrincipal ventana_menu = new MenuPrincipal();

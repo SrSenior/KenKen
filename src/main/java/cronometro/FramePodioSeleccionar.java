@@ -7,71 +7,74 @@ package cronometro;
 import java.io.File;
 
 /**
- *
- * @author kenne
+ *Clase que muestra el podio de una dificultad y un tamaño especifico
+ * @author Kenneth Vargas Chacon
  */
 public class FramePodioSeleccionar extends javax.swing.JFrame {
 
     /**
-     * Creates new form FramePodioSeleccionar
+     * Constructor
+     * @param tamaño El tamaño de la cuadricula
+     * @param dificultad La dificultad de la partida
      */
     public FramePodioSeleccionar(String tamaño, String dificultad) {
         initComponents();
         lblTitulo.setText("Podio " + tamaño + dificultad);
+        System.out.println(ListaNiveles.getNivel3x3().imprimirListaNivel(ListaNiveles.getNivel3x3().getListaFacil()));
         if (tamaño=="3x3"){
             if (dificultad=="Facil"){
                 txaElementos.append(ListaNiveles.getNivel3x3().imprimirListaNivel(ListaNiveles.getNivel3x3().getListaFacil()));
-            }else if(tamaño=="Medio"){
+            }else if(dificultad=="Medio"){
                 txaElementos.append(ListaNiveles.getNivel3x3().imprimirListaNivel(ListaNiveles.getNivel3x3().getListaMedio()));
-            }else if(tamaño=="Dificil"){
+            }else if(dificultad=="Dificil"){
                 txaElementos.append(ListaNiveles.getNivel3x3().imprimirListaNivel(ListaNiveles.getNivel3x3().getListaDificil()));
             }
         }else if (tamaño=="4x4"){
             if (dificultad=="Facil"){
                 txaElementos.append(ListaNiveles.getNivel4x4().imprimirListaNivel(ListaNiveles.getNivel4x4().getListaFacil()));
-            }else if(tamaño=="Medio"){
+            }else if(dificultad=="Medio"){
                 txaElementos.append(ListaNiveles.getNivel4x4().imprimirListaNivel(ListaNiveles.getNivel4x4().getListaMedio()));
-            }else if(tamaño=="Dificil"){
+            }else if(dificultad=="Dificil"){
                 txaElementos.append(ListaNiveles.getNivel4x4().imprimirListaNivel(ListaNiveles.getNivel4x4().getListaDificil()));
             }
         }else if (tamaño=="5x5"){
             if (dificultad=="Facil"){
                 txaElementos.append(ListaNiveles.getNivel5x5().imprimirListaNivel(ListaNiveles.getNivel5x5().getListaFacil()));
-            }else if(tamaño=="Medio"){
+            }else if(dificultad=="Medio"){
                 txaElementos.append(ListaNiveles.getNivel5x5().imprimirListaNivel(ListaNiveles.getNivel5x5().getListaMedio()));
-            }else if(tamaño=="Dificil"){
+            }else if(dificultad=="Dificil"){
                 txaElementos.append(ListaNiveles.getNivel5x5().imprimirListaNivel(ListaNiveles.getNivel5x5().getListaDificil()));
             }
         }else if (tamaño=="6x6"){
             if (dificultad=="Facil"){
                 txaElementos.append(ListaNiveles.getNivel6x6().imprimirListaNivel(ListaNiveles.getNivel6x6().getListaFacil()));
-            }else if(tamaño=="Medio"){
+            }else if(dificultad=="Medio"){
                 txaElementos.append(ListaNiveles.getNivel6x6().imprimirListaNivel(ListaNiveles.getNivel6x6().getListaMedio()));
-            }else if(tamaño=="Dificil"){
+            }else if(dificultad=="Dificil"){
                 txaElementos.append(ListaNiveles.getNivel6x6().imprimirListaNivel(ListaNiveles.getNivel6x6().getListaDificil()));
             }
         }else if (tamaño=="7x7"){
             if (dificultad=="Facil"){
                 txaElementos.append(ListaNiveles.getNivel7x7().imprimirListaNivel(ListaNiveles.getNivel7x7().getListaFacil()));
-            }else if(tamaño=="Medio"){
+            }else if(dificultad=="Medio"){
                 txaElementos.append(ListaNiveles.getNivel7x7().imprimirListaNivel(ListaNiveles.getNivel7x7().getListaMedio()));
-            }else if(tamaño=="Dificil"){
+            }else if(dificultad=="Dificil"){
                 txaElementos.append(ListaNiveles.getNivel7x7().imprimirListaNivel(ListaNiveles.getNivel7x7().getListaDificil()));
             }
         }else if (tamaño=="8x8"){
             if (dificultad=="Facil"){
                 txaElementos.append(ListaNiveles.getNivel8x8().imprimirListaNivel(ListaNiveles.getNivel8x8().getListaFacil()));
-            }else if(tamaño=="Medio"){
+            }else if(dificultad=="Medio"){
                 txaElementos.append(ListaNiveles.getNivel8x8().imprimirListaNivel(ListaNiveles.getNivel8x8().getListaMedio()));
-            }else if(tamaño=="Dificil"){
+            }else if(dificultad=="Dificil"){
                 txaElementos.append(ListaNiveles.getNivel8x8().imprimirListaNivel(ListaNiveles.getNivel8x8().getListaDificil()));
             }
         }else if (tamaño=="9x9"){
             if (dificultad=="Facil"){
                 txaElementos.append(ListaNiveles.getNivel9x9().imprimirListaNivel(ListaNiveles.getNivel9x9().getListaFacil()));
-            }else if(tamaño=="Medio"){
+            }else if(dificultad=="Medio"){
                 txaElementos.append(ListaNiveles.getNivel9x9().imprimirListaNivel(ListaNiveles.getNivel9x9().getListaMedio()));
-            }else if(tamaño=="Dificil"){
+            }else if(dificultad=="Dificil"){
                 txaElementos.append(ListaNiveles.getNivel9x9().imprimirListaNivel(ListaNiveles.getNivel9x9().getListaDificil()));
             }
         }
@@ -93,7 +96,7 @@ public class FramePodioSeleccionar extends javax.swing.JFrame {
         lblOro = new javax.swing.JLabel();
         lblPlata = new javax.swing.JLabel();
         lblBronce = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -141,12 +144,12 @@ public class FramePodioSeleccionar extends javax.swing.JFrame {
         lblBronce.setForeground(new java.awt.Color(119, 87, 2));
         lblBronce.setText("Bronce");
 
-        jButton1.setBackground(new java.awt.Color(33, 150, 243));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Volver");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnSalir.setBackground(new java.awt.Color(33, 150, 243));
+        btnSalir.setForeground(new java.awt.Color(255, 255, 255));
+        btnSalir.setText("Volver");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnSalirActionPerformed(evt);
             }
         });
 
@@ -167,7 +170,7 @@ public class FramePodioSeleccionar extends javax.swing.JFrame {
                             .addComponent(lblPlata, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(pnlBaseLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnSalir)))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -185,7 +188,7 @@ public class FramePodioSeleccionar extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblBronce)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 8, Short.MAX_VALUE))
         );
@@ -204,16 +207,16 @@ public class FramePodioSeleccionar extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         MenuPrincipal volver = new MenuPrincipal();
         volver.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnSalirActionPerformed
 
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnSalir;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblBronce;
     private javax.swing.JLabel lblOro;

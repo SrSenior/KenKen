@@ -23,16 +23,23 @@ import javax.swing.JButton;
  */
 public class FrameJuego extends javax.swing.JFrame {
     
-    /**
-     * Creates new form FrameJuego
-     * @param dificultad es la dificultad según la que deplegamos las jaulas
-     */
     private boolean confirmarReinicio = false, noTiempo;
     private int tamaño;
     private String dificultad;
     private ArrayList<JButton> botonesIzq = new ArrayList();
     private ArrayList<JButton> botonesDer = new ArrayList();
     
+    /**
+     * Constructor
+     * @param dificultad La dificultad
+     * @param lado  El lado
+     * @param cronoTemp Referencia
+     * @param noTiempo No tiempo
+     * @param horas Horas
+     * @param minutos Minutos
+     * @param segundos Segundos
+     * @param tamaño Tamaño
+     */
     public FrameJuego(String dificultad, boolean lado, boolean cronoTemp, boolean noTiempo, int horas, int minutos, int segundos, int tamaño) 
     {
         this.tamaño = tamaño;
@@ -81,9 +88,9 @@ public class FrameJuego extends javax.swing.JFrame {
         DesactivarElementos();
     }
     
-    /*
-    *Función que llena las listas de botones para un más sencillo manejo
-    */
+    /**
+     * Funcion que llena las listas
+     */
     public void llenarListasBtns()
     {
        
@@ -110,9 +117,9 @@ public class FrameJuego extends javax.swing.JFrame {
         activar();
     }
     
-    /*
-    *Función que activa o desactiva los botones en función del tamaño de la cuadrícula que se use
-    */
+    /**
+     * Funcion que activa un boton
+     */
     public void activar()
     {
         
@@ -138,7 +145,10 @@ public class FrameJuego extends javax.swing.JFrame {
         kenKenPanel1.QuitarEstadoError();
         kenKenPanel1.casillasEnBlanco(false);//Se despintan los botones en blanco para mantener la vista más uniforme
     }
-    
+    /**
+     * Reproduce un sonido
+     * @throws Exception Evita que se caiga el programa
+     */
     public static void reproducir()throws Exception
     {
         String sonido = "victoria.wav";
@@ -150,6 +160,7 @@ public class FrameJuego extends javax.swing.JFrame {
     
     /**
      * Esta función comprueba si alguno de los labels informativos está activo
+     * @return Retorna si están activos o no
      */
     public boolean EstanActivos()
     {
@@ -1198,7 +1209,7 @@ public class FrameJuego extends javax.swing.JFrame {
 
                 tiempoTotal = String.format("%02d:%02d:%02d", tiempoH, tiempoM, tiempoS);
 
-                VentanaGanador ventanaGanador = new VentanaGanador(tiempoTotal, tamaño, dificultad);
+                VentanaGanador ventanaGanador = new VentanaGanador(tiempoTotal, tiempoH, tiempoM, tiempoS, tamaño, dificultad);
                 ventanaGanador.setVisible(true);
             }
         

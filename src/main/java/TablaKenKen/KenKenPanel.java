@@ -53,7 +53,8 @@ public class KenKenPanel extends javax.swing.JPanel {
     }
 
     /**
-     * se establece el tamaño de la cuadrícula según la selección del usuario
+     * Señala el tamaño de la cuadricula
+     * @param sizeCuadricula Tamaño
      */
     public void setSizeCuadricula(int sizeCuadricula) 
     {
@@ -114,10 +115,8 @@ public class KenKenPanel extends javax.swing.JPanel {
     
     /**
      * Setter de dificultad
-     * @param dificultad 
+     * @param dificultad Dificultad de la partida
      */
-
-    
     public void setDificultad(String dificultad) 
     {
         this.dificultad = dificultad;
@@ -264,7 +263,8 @@ public class KenKenPanel extends javax.swing.JPanel {
     
     /**
      * Es la funcion que de hecho pone un texto en el centro de cada boton
-     * @param texto 
+     * @param texto Hace un setter del texto para el numero que coloca el usuario
+     * Llama a {@link BotonesTablaKenKen#setTextoPrincipal(java.lang.String) }
      */
     public void AgregarTextoCentral(String texto)
     {
@@ -276,6 +276,7 @@ public class KenKenPanel extends javax.swing.JPanel {
     
     /**
      * Esta función borra el texto de un botón 
+     * Llama a {@link BotonesTablaKenKen#BorrarTextoIndividual() }
      */
     public void BorrarTextoCasilla()
     {
@@ -287,6 +288,7 @@ public class KenKenPanel extends javax.swing.JPanel {
     
     /**
      * Esta función borra el texto de todos los botones
+     * Llama a {@link BotonesTablaKenKen#Reinicio() }
      */
     public void BorrarTextoTotal()
     {
@@ -298,6 +300,8 @@ public class KenKenPanel extends javax.swing.JPanel {
     
     /**
      * Esta función retorna true si hay al menos un botón activo
+     * Llama a {@link BotonesTablaKenKen#getEstadoActivo() }
+     * @return si al menos uno está activo
      */
     public boolean AlMenosUnoActivo()
     {
@@ -309,7 +313,9 @@ public class KenKenPanel extends javax.swing.JPanel {
     }
     
     /**
-     * Esta función valida si hay números repetidos en la partida
+     * Esta función valida la partida
+     * Llama a {@link BotonesTablaKenKen#getTextoCentral() }
+     * @return Si se repiten elementos
      */
     public boolean validarRepetidosJuego()
     {
@@ -335,6 +341,14 @@ public class KenKenPanel extends javax.swing.JPanel {
         return false;
     }
     
+    /**
+     * Funcion que valida si hay un repetido en una fila
+     * @param numFila La fila
+     * @param numCasilla La casilla para comparar
+     * @return Si está repetido o no
+     * Llama a {@link BotonesTablaKenKen#getTextoCentral() }
+     * Llama a {@link BotonesTablaKenKen#SetEstadoErr(boolean) }
+     */
     public boolean validarRepetidosFila(int numFila, int numCasilla)
     {
         String textoBtnCualquiera;
@@ -359,7 +373,15 @@ public class KenKenPanel extends javax.swing.JPanel {
         
         return false;
     }
-
+    
+    /**
+     * Funcion que valida si hay un repetido en una fila
+     * @param numColumna  La fila
+     * @param numCasilla La casilla para comparar
+     * @return Si está repetido o no
+     * Llama a {@link BotonesTablaKenKen#getTextoCentral() }
+     * Llama a {@link BotonesTablaKenKen#SetEstadoErr(boolean) }
+     */
     public boolean validarRepetidosColumna(int numColumna, int numCasilla)
     {
         String textoBtnCualquiera;
@@ -386,6 +408,7 @@ public class KenKenPanel extends javax.swing.JPanel {
     /**
     * Función que se encargará de manipular el valor de si las casillas están en blanco o no
     * @param modo si es true, se pintan las casillas para indicarle al jugador que quedan casillas sin llenar, si está en false, se despintan
+    * Llama a {@link BotonesTablaKenKen#setCasillaBlanco(boolean) }
     */
     public void casillasEnBlanco(boolean modo)
     {
@@ -401,7 +424,10 @@ public class KenKenPanel extends javax.swing.JPanel {
             }
         }
     }
-    
+    /**
+     * Metodo que quita el estado de error
+     * Llama a {@link BotonesTablaKenKen#SetEstadoErr(boolean) }
+     */
     public void QuitarEstadoError()
     {
         for(BotonesTablaKenKen btn : botonesKenKen)
@@ -410,6 +436,15 @@ public class KenKenPanel extends javax.swing.JPanel {
         }
     }
     
+    /**
+     * Funcion que valida si el resultado dentro de las jaulas coincide con lo requerido por el texto superior
+     * @return Si está correcto o no
+     * Llama a {@link JaulasKenKen#getCasillasCorrespondientes() }
+     * Llama a {@link BotonesTablaKenKen#getTextoCentral() }
+     * Llama a {@link JaulasKenKen#getOperacion() }
+     * Llama a {@link JaulasKenKen#getValor() }
+     * Llama a {@link BotonesTablaKenKen#SetEstadoErr(boolean) }
+     */
     public boolean ValidarResultadosJaulas()
     {
         List<Integer> casillasJaula;

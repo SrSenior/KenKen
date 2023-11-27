@@ -14,14 +14,14 @@ import java.util.logging.Logger;
  */
 public class ThreadCrono extends Thread{
     
-    private boolean running = true;
-    private boolean pausa = false;
-    private int contador = 0;
-    private CronoLabel referencia_crono;
+    private boolean running = true; //Permite que corra el tiempo
+    private boolean pausa = false; //Permite pausar el tiempo
+    private int contador = 0; //Muestra el tiempo
+    private CronoLabel referencia_crono; //Referencia al label
     
     /**
      * Constructor
-     * @param pCrono 
+     * @param pCrono Es una referencia al label
      */
     public ThreadCrono(CronoLabel pCrono){
         
@@ -51,7 +51,7 @@ public class ThreadCrono extends Thread{
     
     /**
      * Getter del atributo running
-     * @return boolean
+     * @return retorna el estado del while true
      */
     public boolean isRunning() {
         return running;
@@ -66,7 +66,7 @@ public class ThreadCrono extends Thread{
 
     /**
      * Getter de pausa
-     * @return boolean
+     * @return Retorna el estado de pausa
      */
     public boolean isPaused() {
         return pausa;
@@ -81,7 +81,7 @@ public class ThreadCrono extends Thread{
 
     /**
      * Cambia el estado de running
-     * @param running 
+     * @param running Permite cambiar el estado del elemento
      */
     public void setRunning(boolean running) {
         this.running = running;
@@ -89,12 +89,10 @@ public class ThreadCrono extends Thread{
 
     /**
      * Setter de pausa
-     * @param pausa 
+     * @param pausa Asigna un estado al elemento pausas
      */
     public void setPausa(boolean pausa) {
         this.pausa = pausa;
     }
-    
-    
     
 }

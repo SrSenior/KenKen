@@ -32,7 +32,9 @@ public class AjustesDePartida extends javax.swing.JFrame {
         panelError.setVisible(false);
         
     }
-
+    /**
+     * Funcion que rellena las opciones del combobox de los tiempos
+     */
     public void llenarCombobox ()
     {
         //Se llenan las cajas de las horas y de los minutos con los números del 0 al 59
@@ -429,11 +431,6 @@ public class AjustesDePartida extends javax.swing.JFrame {
     private void comboTamañoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboTamañoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_comboTamañoActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btngDificultad;

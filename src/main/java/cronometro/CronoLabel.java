@@ -13,10 +13,10 @@ import javax.swing.JLabel;
  */
 public class CronoLabel extends javax.swing.JLabel {
 
-    private ThreadCrono cronometro;
-    private int segundos = 0;
-    private int minutos = 0;
-    private int horas = 0;
+    private ThreadCrono cronometro; //Referencia al thread
+    private int segundos = 0; //Segundos
+    private int minutos = 0; //Minutos
+    private int horas = 0; //Horas
     
     /**
      * Metodo constructor
@@ -101,7 +101,7 @@ public class CronoLabel extends javax.swing.JLabel {
     
     /**
      * Getter de segundos
-     * @return atributo Segundos
+     * @return Retorna el atributo Segundos
      */
     public int getSegundos() {
         return segundos;
@@ -109,7 +109,7 @@ public class CronoLabel extends javax.swing.JLabel {
 
     /**
      * Setter de segundos
-     * @param segundos 
+     * @param segundos segundos recoge un entero que va a ser el atributo segundos
      */
     public void setSegundos(int segundos) {
         this.segundos = segundos;
@@ -117,7 +117,7 @@ public class CronoLabel extends javax.swing.JLabel {
 
     /**
      * Getter de Minutos
-     * @return atributo minutos
+     * @return Retorna el atributo minutos
      */
     public int getMinutos() {
         return minutos;
@@ -125,7 +125,7 @@ public class CronoLabel extends javax.swing.JLabel {
 
     /**
      * Setter de minutos
-     * @param minutos 
+     * @param minutos Recoge un entero que va a ser el atributo minutos
      */
     public void setMinutos(int minutos) {
         this.minutos = minutos;
@@ -133,7 +133,7 @@ public class CronoLabel extends javax.swing.JLabel {
 
     /**
      * getter de horas
-     * @return atributo horas
+     * @return Retorna el atributo horas
      */
     public int getHoras() {
         return horas;
@@ -141,7 +141,7 @@ public class CronoLabel extends javax.swing.JLabel {
 
     /**
      * Setter de horas
-     * @param horas 
+     * @param horas Recoge un dato entero que va a ser el atributo hora
      */
     public void setHoras(int horas) {
         this.horas = horas;

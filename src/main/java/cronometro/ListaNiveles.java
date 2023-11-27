@@ -41,58 +41,101 @@ public class ListaNiveles {
         return instance;
     }
 
+    /**
+     * Getter
+     * @return El nivel 
+     */
     public static Nivel getNivel3x3() {
         return nivel3x3;
     }
-
+    /**
+     * Setter
+     * @param nivel3x3 Valor de nivel
+     */
     public static void setNivel3x3(Nivel nivel3x3) {
         ListaNiveles.nivel3x3 = nivel3x3;
     }
-
+    /**
+     * Getter
+     * @return El nivel 
+     */
     public static Nivel getNivel4x4() {
         return nivel4x4;
     }
-
+    /**
+     * Setter
+     * @param nivel4x4 Valor de nivel
+     */
     public static void setNivel4x4(Nivel nivel4x4) {
         ListaNiveles.nivel4x4 = nivel4x4;
     }
-
+    /**
+     * Getter
+     * @return El nivel 
+     */
     public static Nivel getNivel5x5() {
         return nivel5x5;
     }
-
+    /**
+     * Setter
+     * @param nivel5x5 Valor de nivel
+     */
     public static void setNivel5x5(Nivel nivel5x5) {
         ListaNiveles.nivel5x5 = nivel5x5;
     }
-
+    /**
+     * Getter
+     * @return El nivel 
+     */
     public static Nivel getNivel6x6() {
         return nivel6x6;
     }
-
+    /**
+     * Setter
+     * @param nivel6x6 Valor de nivel
+     */
     public static void setNivel6x6(Nivel nivel6x6) {
         ListaNiveles.nivel6x6 = nivel6x6;
     }
-
+    /**
+     * Getter
+     * @return El nivel 
+     */
     public static Nivel getNivel7x7() {
         return nivel7x7;
     }
-
+    /**
+     * Setter
+     * @param nivel7x7 Valor de nivel
+     */
     public static void setNivel7x7(Nivel nivel7x7) {
         ListaNiveles.nivel7x7 = nivel7x7;
     }
-
+    /**
+     * Getter
+     * @return El nivel 
+     */
     public static Nivel getNivel8x8() {
         return nivel8x8;
     }
-
+    /**
+     * Setter
+     * @param nivel8x8 Valor de nivel
+     */
     public static void setNivel8x8(Nivel nivel8x8) {
         ListaNiveles.nivel8x8 = nivel8x8;
     }
-
+    /**
+     * Getter
+     * @return El nivel 
+     */
     public static Nivel getNivel9x9() {
         return nivel9x9;
     }
-
+    /**
+     * Setter
+     * @param nivel9x9 Valor de nivel 
+     */
     public static void setNivel9x9(Nivel nivel9x9) {
         ListaNiveles.nivel9x9 = nivel9x9;
     }

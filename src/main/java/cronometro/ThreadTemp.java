@@ -14,14 +14,14 @@ import java.util.logging.Logger;
  */
 public class ThreadTemp extends Thread{
     
-    private boolean running = true;
-    private boolean pausa = false;
-    private int contador = 0;
-    private TempLabel referencia_temp;
+    private boolean running = true; //Sirve para que corra el temporizador
+    private boolean pausa = false; //Sirve para pausarlo
+    private int contador = 0; //Es lo que muestra el tiempo
+    private TempLabel referencia_temp; //Referencia al label
     
     /**
      * Constructor
-     * @param pTemp 
+     * @param pTemp Referencia al label
      */
     public ThreadTemp(TempLabel pTemp){
         
@@ -51,7 +51,7 @@ public class ThreadTemp extends Thread{
     
     /**
      * Getter de running
-     * @return 
+     * @return el estado del boolean que permite el while true
      */
     public boolean isRunning() {
         return running;
@@ -65,7 +65,7 @@ public class ThreadTemp extends Thread{
     }
     /**
      * getter de pausa
-     * @return 
+     * @return Retorna el estado de pausa
      */
     public boolean isPaused() {
         return pausa;
@@ -80,7 +80,7 @@ public class ThreadTemp extends Thread{
 
     /**
      * Setter de running
-     * @param running 
+     * @param running Permite cambiar el estado booleano del boolean principal
      */
     public void setRunning(boolean running) {
         this.running = running;
@@ -88,12 +88,10 @@ public class ThreadTemp extends Thread{
 
     /**
      * Setter de running
-     * @param pausa 
+     * @param pausa permite cambiar el estado de pausa
      */
     public void setPausa(boolean pausa) {
         this.pausa = pausa;
-    }
-    
-    
+    }  
     
 }

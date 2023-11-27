@@ -26,11 +26,24 @@ import java.util.logging.Logger;
 
 /**
  * Esta clase permite pasar a .dat y leerlo
- * @author Tusabras
+ * @author Kenneth Vargas Chacón
  */
 public class FileManager {
  
+    /**
+     * Constructor
+     */
+    public FileManager(){
+        
+    }
     // read txt file, para ller el query
+    /**
+     * Funcion que lee archivos
+     * @param path Ruta del archivo
+     * @return El contenido del archivo
+     * @throws FileNotFoundException Permite que no se caiga
+     * @throws IOException Permite que no se caiga
+     */
     public static String readFile (String path) throws FileNotFoundException, IOException
     {
        
@@ -54,7 +67,12 @@ public class FileManager {
     }
     
     
-        // read txt file, para ller el query
+    /**
+     * Funcion que escribe archivos
+     * @param path Nombre del archivo y su ruta
+     * @param value Valor
+     * @throws IOException Permite que no se caiga
+     */
     public static void writeFile (String path, String value) throws IOException 
     {
 
@@ -67,7 +85,11 @@ public class FileManager {
         
     }
     
-    // escribe un objeto
+    /**
+     * Funcion que escribe un objeto
+     * @param obj El objeto
+     * @param filePath El camino o ruta
+     */
     public static void writeObject (Object obj, String filePath)
     {
         try{
@@ -89,7 +111,11 @@ public class FileManager {
         
     }
     
-      // escribe un objeto
+    /**
+     * Funcion que lee un objeto
+     * @param filePath La ruta o nombre del objeto
+     * @return El objeto, pero es necesario hacer un casting
+     */
     public static Object readObject(String filePath)
     {
         try{

@@ -13,16 +13,16 @@ import javax.swing.JLabel;
  */
 public class TempLabel extends javax.swing.JLabel {
 
-    private ThreadTemp temporizador;
-    private int segundos;
-    private int minutos;
-    private int horas;
+    private ThreadTemp temporizador; //Referencia al thread
+    private int segundos; //Segundos del temporizador
+    private int minutos; //Minutos del temporizador
+    private int horas; //horas del temporizador
     
     /**
      * Constructor
-     * @param pSegundos
-     * @param pMinutos
-     * @param pHoras 
+     * @param pSegundos Segundos que transcurren
+     * @param pMinutos Minutos que transcurren
+     * @param pHoras Horas que transcurren
      */
     public TempLabel(int pSegundos, int pMinutos,int pHoras) {
       
@@ -125,7 +125,7 @@ public class TempLabel extends javax.swing.JLabel {
 
     /**
      * Getter de segundos
-     * @return int
+     * @return Retorna el atributo segundos
      */
     public int getSegundos() {
         return segundos;
@@ -133,7 +133,7 @@ public class TempLabel extends javax.swing.JLabel {
 
     /**
      * Setter de segundos
-     * @param segundos 
+     * @param segundos Asigna un valor al atributo segundos
      */
     public void setSegundos(int segundos) {
         this.segundos = segundos;
@@ -141,7 +141,7 @@ public class TempLabel extends javax.swing.JLabel {
 
     /**
      * Getter de minutos
-     * @return int
+     * @return Retorna el entero del atributo minutos
      */
     public int getMinutos() {
         return minutos;
@@ -149,7 +149,7 @@ public class TempLabel extends javax.swing.JLabel {
 
     /**
      * Setter de minutos
-     * @param minutos 
+     * @param minutos Asigna un valor entero al atributo minutos
      */
     public void setMinutos(int minutos) {
         this.minutos = minutos;
@@ -157,7 +157,7 @@ public class TempLabel extends javax.swing.JLabel {
 
     /**
      * Getter de horas
-     * @return int
+     * @return Retorna el atributo horas
      */
     public int getHoras() {
         return horas;
@@ -165,11 +165,10 @@ public class TempLabel extends javax.swing.JLabel {
 
     /**
      * Setter de horas
-     * @param horas 
+     * @param horas Asigna un entero al atributo horas
      */
     public void setHoras(int horas) {
         this.horas = horas;
     }
-    
-    
+
 }

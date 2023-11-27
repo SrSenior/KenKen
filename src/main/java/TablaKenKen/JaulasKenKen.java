@@ -21,9 +21,9 @@ public class JaulasKenKen
     
     /**
      * Constructor
-     * @param valor
-     * @param operacion
-     * @param casillasCorrespondientes 
+     * @param valor Valor del resultado de la jaula
+     * @param operacion Operacion para llegar al resultado
+     * @param casillasCorrespondientes Lista de botones para cada jaula
      */
     public JaulasKenKen(int valor, String operacion, List<Integer> casillasCorrespondientes) //Constructor que recibe parámetros para llenar los valores de los atributos de la clase
     {
@@ -36,7 +36,7 @@ public class JaulasKenKen
 
     /**
      * Getter de valor
-     * @return 
+     * @return Retorna el resultado
      */
     public int getValor() {
         return valor;
@@ -44,7 +44,7 @@ public class JaulasKenKen
 
     /**
      * Getter de operacion
-     * @return 
+     * @return retorna la operación
      */
     public String getOperacion() {
         return operacion;
@@ -52,7 +52,7 @@ public class JaulasKenKen
 
     /**
      * Getter de la lista de casillas
-     * @return 
+     * @return Retorna la lista de botones
      */
     public List<Integer> getCasillasCorrespondientes() {
         return casillasCorrespondientes;

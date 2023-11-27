@@ -28,8 +28,9 @@ public class LeerXML {
     private String XMLRuta;
     private int tamaño;
     
-     /**
-     * Metodo constructor
+    /**
+     * Constructor
+     * @param tamaño Tamaño de la cuadricula
      */
     public LeerXML(int tamaño) 
     {
@@ -160,7 +161,8 @@ public class LeerXML {
     }
 
     /**
-     * Método para retornar la lista de partidas
+     * Metodo que retorna la lista de partidas
+     * @return Retorna la lista de partidas
      */
     public List<Partida> getListaPartidas() 
     {

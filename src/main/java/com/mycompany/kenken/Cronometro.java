@@ -7,15 +7,21 @@ package com.mycompany.kenken;
 import cronometro.MenuPrincipal;
 
 /**
- *
- * @author jpveg
- * 
+ *Main class
+ * @author José Pablo Vega
  */
 public class Cronometro {
 
     /**
-     * @param args the command line arguments
+     * Constructor
+     */
+    public Cronometro(){
+        
+    }
+    
+    /**
      * método principal
+     * @param args the command line arguments
      */
     public static void main(String[] args) {
         MenuPrincipal ventana = new MenuPrincipal();

@@ -39,14 +39,19 @@ public class BotonesTablaKenKen extends JButton
     
     }
 
+     /**
+     * Setter de err
+     * @param err Nuevo valor del atributo err
+     */
+    
     public void SetEstadoErr(boolean err) {
         this.err = err;
     }
 
-    /*
-    *Función para activar o desactivar el atributo que indica si está o no en blanco la casilla
-    * @param blanc valor que se le dará al atributo
-    */
+    /**
+     * Función para activar o desactivar el atributo que indica si está o no en blanco la casilla
+     * @param blanc Si la casilla está en blanco o no
+     */
     public void setCasillaBlanco(boolean blanc) {
         this.blanc = blanc;
     }
@@ -111,15 +116,10 @@ public class BotonesTablaKenKen extends JButton
         addActionListener(buttonListener);
         
     }
-        
-    /**
-     * Getter del atributo act
-     * @return retorna el atributo act.
-     */
-    
+
     /**
      * Función para obtener el estado del botón, se usa para detectar si el botón ya está activo o no, y actuar en consecuencia
-     * @return 
+     * @return Retorna el estado
      */
     public boolean getEstadoActivo()
     {
@@ -130,6 +130,7 @@ public class BotonesTablaKenKen extends JButton
     
      /**
      * Cambia el estado del atributo.
+     * Llama a {@link BotonesTablaKenKen#desactivarOtrosBotones() }
      */
     public void cambiarEstadoAtributo() 
     {
@@ -148,6 +149,8 @@ public class BotonesTablaKenKen extends JButton
     
      /**
      * Desactiva otros botones.
+     * Llama a {@link BotonesTablaKenKen#getEstadoActivo() }
+     * Llama a {@link BotonesTablaKenKen#cambiarEstadoAtributo() }
      */
     private void desactivarOtrosBotones() 
     {
@@ -178,7 +181,7 @@ public class BotonesTablaKenKen extends JButton
     
     /**
      * Cambia el texto del centro del boton
-     * @param textoCentral 
+     * @param textoCentral Asigna el valor al texto principal, que tiene el resultado y la operacion
      */
     public void setTextoPrincipal(String textoCentral)
     {
@@ -199,7 +202,7 @@ public class BotonesTablaKenKen extends JButton
     
     /**
      * Cambia el texto del encabezado de la jaula
-     * @param texto 
+     * @param texto Establece el numero que pone el jugador
      */
     public void setTextoSuperior(String texto)
     {
@@ -208,18 +211,26 @@ public class BotonesTablaKenKen extends JButton
         textoSuperior = texto;
     }
 
+    /**
+     * getter de TextoCentral
+     * @return Retorna el texto que contiene al numero de cada boton
+     */
     public String getTextoCentral() {
         return textoCentral;
     }
     
-    /*
-    * Función que retorna una valor booleano según si el botón está en blanco o no
-    */
+    /**
+     * Función que retorna una valor booleano según si el botón está en blanco o no
+     * @return Si está en blanco o no
+     */
     public boolean getEnBlanco()
     {
         return blanc;
     }
     
+    /**
+     * Funcion que hace un set del texto para dejarlo en blanco
+     */
     public void BorrarTextoIndividual()
     {
         if(act)
@@ -237,6 +248,9 @@ public class BotonesTablaKenKen extends JButton
         }
     }
     
+    /**
+     * Funcion que mantiene el textoSuperior
+     */
     public void Reinicio()
     {
         
