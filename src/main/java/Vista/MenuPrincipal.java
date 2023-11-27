@@ -1,8 +1,12 @@
-package cronometro;
+package Vista;
 
-import Informacion.AcercaDe;
-import Informacion.Ayuda;
-import static Informacion.Ayuda.abrirManual;
+import Vista.FrameSeleccionarPodio;
+import Vista.AjustesDePartida;
+import Vista.AcercaDe;
+import Controlador.Ayuda;
+import Modelo.FileManager;
+import Modelo.PaqueteNiveles;
+import static Controlador.Ayuda.abrirManual;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 

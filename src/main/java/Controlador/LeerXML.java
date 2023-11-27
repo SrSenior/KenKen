@@ -2,10 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package cronometro;
+package Controlador;
 
-import TablaKenKen.JaulasKenKen;
-import com.mycompany.kenken.ManejoInfo;
+import Modelo.Partida;
+import Modelo.JaulasKenKen;
+import Controlador.ManejoInfo;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;

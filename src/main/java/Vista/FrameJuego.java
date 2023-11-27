@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package TablaKenKen;
+package Vista;
 
-import cronometro.AjustesDePartida;
-import cronometro.MenuPrincipal;
-import cronometro.TempLabel;
-import cronometro.VentanaGanador;
+import Vista.AjustesDePartida;
+import Vista.MenuPrincipal;
+import Modelo.TempLabel;
+import Vista.VentanaGanador;
 import java.awt.GridLayout;
 
 import java.io.FileInputStream;
@@ -235,9 +235,9 @@ public class FrameJuego extends javax.swing.JFrame {
         jButton15 = new javax.swing.JButton();
         jButton16 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
-        cronoLabel2 = new cronometro.CronoLabel();
-        tempLabel1 = new cronometro.TempLabel();
-        kenKenPanel1 = new TablaKenKen.KenKenPanel();
+        cronoLabel2 = new Modelo.CronoLabel();
+        tempLabel1 = new Modelo.TempLabel();
+        kenKenPanel1 = new Modelo.KenKenPanel();
         panelNoErrores = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         panelErrores = new javax.swing.JPanel();
@@ -1239,7 +1239,7 @@ public class FrameJuego extends javax.swing.JFrame {
     private javax.swing.JButton btn7;
     private javax.swing.JButton btn8;
     private javax.swing.JButton btn9;
-    private cronometro.CronoLabel cronoLabel2;
+    private Modelo.CronoLabel cronoLabel2;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -1277,9 +1277,9 @@ public class FrameJuego extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private TablaKenKen.KenKenPanel kenKenPanel1;
+    private Modelo.KenKenPanel kenKenPanel1;
     private javax.swing.JPanel panelErrores;
     private javax.swing.JPanel panelNoErrores;
-    private cronometro.TempLabel tempLabel1;
+    private Modelo.TempLabel tempLabel1;
     // End of variables declaration//GEN-END:variables
 }

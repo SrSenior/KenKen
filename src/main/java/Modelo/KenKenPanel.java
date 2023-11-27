@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package TablaKenKen;
+package Modelo;
 
-import com.mycompany.kenken.ManejoInfo;
+import Modelo.BotonesTablaKenKen;
+import Controlador.ManejoInfo;
 import com.mycompany.kenken.Movimiento;
-import cronometro.LeerXML;
-import cronometro.Partida;
+import Controlador.LeerXML;
 import java.awt.Color;
 import java.awt.Component;
 import java.util.ArrayList;

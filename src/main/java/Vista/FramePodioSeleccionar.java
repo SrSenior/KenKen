@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package cronometro;
+package Vista;
 
+import Controlador.ListaNiveles;
 import java.io.File;
 
 /**
@@ -128,7 +129,6 @@ public class FramePodioSeleccionar extends javax.swing.JFrame {
         txaElementos.setBackground(new java.awt.Color(204, 204, 204));
         txaElementos.setColumns(20);
         txaElementos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txaElementos.setForeground(new java.awt.Color(0, 0, 0));
         txaElementos.setRows(5);
         jScrollPane1.setViewportView(txaElementos);
 

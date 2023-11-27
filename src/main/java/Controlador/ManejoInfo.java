@@ -2,13 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.kenken;
+package Controlador;
 
-import TablaKenKen.JaulasKenKen;
+import Modelo.JaulasKenKen;
 import java.util.ArrayList;
 import java.util.List;
-import cronometro.LeerXML;
-import cronometro.Partida;
+import Modelo.Partida;
 
 /**
  *Esta clase va a manejar la información de las diferentes jaulas extraída del xml
