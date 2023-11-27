@@ -2,6 +2,7 @@ package cronometro;
 
 import Informacion.AcercaDe;
 import Informacion.Ayuda;
+import static Informacion.Ayuda.abrirManual;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 
@@ -10,6 +11,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     public MenuPrincipal() {
         initComponents();
+        try{
+            PaqueteNiveles leer = (PaqueteNiveles)FileManager.readObject("kenken2023podio.dat");
+            leer.cargarDatos();
+        }catch(NullPointerException ex){}
     }
 
     @SuppressWarnings("unchecked")
@@ -20,9 +25,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
         pnlTitulo = new javax.swing.JPanel();
         lblTitulo = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnIniciar = new javax.swing.JButton();
+        btnAyuda = new javax.swing.JButton();
+        btnAcercade = new javax.swing.JButton();
+        btnPodio = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,7 +58,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addContainerGap(37, Short.MAX_VALUE))
         );
 
-        jPanel1.add(pnlTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 360, 110));
+        jPanel1.add(pnlTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 0, 360, 110));
 
         jButton1.setBackground(new java.awt.Color(0, 105, 192));
         jButton1.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
@@ -63,46 +69,57 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 440, 80, 60));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 440, 80, 60));
 
-        jButton2.setBackground(new java.awt.Color(19, 127, 217));
-        jButton2.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Iniciar Juego");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnIniciar.setBackground(new java.awt.Color(19, 127, 217));
+        btnIniciar.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
+        btnIniciar.setForeground(new java.awt.Color(255, 255, 255));
+        btnIniciar.setText("Iniciar Juego");
+        btnIniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnIniciarActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 410, 80));
+        jPanel1.add(btnIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 410, 80));
 
-        jButton3.setBackground(new java.awt.Color(19, 127, 217));
-        jButton3.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Ayuda");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnAyuda.setBackground(new java.awt.Color(19, 127, 217));
+        btnAyuda.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
+        btnAyuda.setForeground(new java.awt.Color(255, 255, 255));
+        btnAyuda.setText("Ayuda");
+        btnAyuda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnAyudaActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 410, 80));
+        jPanel1.add(btnAyuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 410, 80));
 
-        jButton4.setBackground(new java.awt.Color(19, 127, 217));
-        jButton4.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Acerca de");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnAcercade.setBackground(new java.awt.Color(19, 127, 217));
+        btnAcercade.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
+        btnAcercade.setForeground(new java.awt.Color(255, 255, 255));
+        btnAcercade.setText("Acerca de");
+        btnAcercade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnAcercadeActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 410, 80));
+        jPanel1.add(btnAcercade, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 410, 80));
+
+        btnPodio.setBackground(new java.awt.Color(19, 127, 217));
+        btnPodio.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
+        btnPodio.setForeground(new java.awt.Color(255, 255, 255));
+        btnPodio.setText("Podio");
+        btnPodio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPodioActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnPodio, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, 410, 80));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -116,27 +133,34 @@ public class MenuPrincipal extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarActionPerformed
         AjustesDePartida ventana_ajustes = new AjustesDePartida();
         ventana_ajustes.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnIniciarActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        Ayuda.abrirManual();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
+        abrirManual();
+    }//GEN-LAST:event_btnAyudaActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btnAcercadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcercadeActionPerformed
         AcercaDe ventanaAcercaDe = new AcercaDe();
         ventanaAcercaDe.setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_btnAcercadeActionPerformed
+
+    private void btnPodioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPodioActionPerformed
+        SeleccionarPodio selecion = new SeleccionarPodio();
+        selecion.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnPodioActionPerformed
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAcercade;
+    private javax.swing.JButton btnAyuda;
+    private javax.swing.JButton btnIniciar;
+    private javax.swing.JButton btnPodio;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JPanel pnlTitulo;

@@ -178,7 +178,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="c0" green="69" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="F&#xe1;cil"/>
+            <Property name="text" type="java.lang.String" value="Facil"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbtnFacilActionPerformed"/>
@@ -222,7 +222,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="c0" green="69" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Dif&#xed;cil"/>
+            <Property name="text" type="java.lang.String" value="Dificil"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

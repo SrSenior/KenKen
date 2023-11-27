@@ -258,7 +258,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
         <jaula>5, +, (4, 4), (4, 5)</jaula>
         <jaula>2, /, (5, 1), (5, 2)</jaula>
         <jaula>1,  , (2, 3)</jaula>
-        <jaula>5,  , (5, 5)</jaula>
+        <jaula>3,  , (5, 5)</jaula>
     </partida>
     <partida>
         <cuadricula>5x5</cuadricula>

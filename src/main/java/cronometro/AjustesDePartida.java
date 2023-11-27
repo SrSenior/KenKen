@@ -141,7 +141,7 @@ public class AjustesDePartida extends javax.swing.JFrame {
         rbtnFacil.setBackground(new java.awt.Color(255, 255, 255));
         btngDificultad.add(rbtnFacil);
         rbtnFacil.setForeground(new java.awt.Color(0, 105, 192));
-        rbtnFacil.setText("Fácil");
+        rbtnFacil.setText("Facil");
         rbtnFacil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rbtnFacilActionPerformed(evt);
@@ -163,7 +163,7 @@ public class AjustesDePartida extends javax.swing.JFrame {
         rbtnDificil.setBackground(new java.awt.Color(255, 255, 255));
         btngDificultad.add(rbtnDificil);
         rbtnDificil.setForeground(new java.awt.Color(0, 105, 192));
-        rbtnDificil.setText("Difícil");
+        rbtnDificil.setText("Dificil");
         jPanel1.add(rbtnDificil, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, -1, -1));
 
         rbtnCronometro.setBackground(new java.awt.Color(255, 255, 255));
