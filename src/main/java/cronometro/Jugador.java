@@ -119,7 +119,10 @@ public class Jugador implements Serializable{
     }
 
     
-    
+    /**
+     * Metodo toString
+     * @return String de informacion del jugador
+     */
     @Override
     public String toString() {
         return "Nombre: " + this.getNombre() + "\tTiempo: " + this.getTiempo();

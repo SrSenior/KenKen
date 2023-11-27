@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * clase para cuando un jugador termina exitosamente una partida cronometrada o temporizada
- * @author José
+ * @author José Pablo Vega Solano
  */
 public class VentanaGanador extends javax.swing.JFrame {
 
@@ -338,10 +338,6 @@ public class VentanaGanador extends javax.swing.JFrame {
         this.dispose();
         
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField campoCorreo;
