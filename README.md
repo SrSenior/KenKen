@@ -32,7 +32,9 @@ El sistema permite generar y resolver tableros dinámicamente a partir de config
 
 <img width="732" height="499" alt="image" src="https://github.com/user-attachments/assets/fb79b0cc-7e73-4f4c-a3da-59d329efcef2" />
 
+
 <img width="595" height="491" alt="image" src="https://github.com/user-attachments/assets/9f2546aa-7d03-4893-ba8c-b75123e17ffb" />
+
 
 <img width="895" height="631" alt="image" src="https://github.com/user-attachments/assets/47a02ac3-28bf-4487-89d7-5b67f55f4a02" />
 
