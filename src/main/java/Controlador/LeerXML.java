@@ -39,7 +39,7 @@ public class LeerXML {
         this.tamaño = tamaño;
         jaulasList = new ArrayList<>();
         listaPartidas = new ArrayList<>();
-        XMLRuta = "src/main/java/cronometro/KenKen.xml";
+        XMLRuta = "src\\main\\java\\Modelo\\KenKen.xml";
         realizarLectura();
 
     }
