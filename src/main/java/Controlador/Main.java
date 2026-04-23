@@ -10,12 +10,12 @@ import Vista.MenuPrincipal;
  *Main class
  * @author José Pablo Vega
  */
-public class Cronometro {
+public class Main {
 
     /**
      * Constructor
      */
-    public Cronometro(){
+    public Main(){
         
     }
     
