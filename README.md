@@ -108,5 +108,3 @@ The system dynamically generates and solves boards based on configurations defin
 
 José Pablo Vega Solano
 [GitHub](https://github.com/SrSenior)
-
-```
