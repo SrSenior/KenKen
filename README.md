@@ -1,32 +1,82 @@
 # KenKen Game (Java)
 
-## 📌 Descripción
+## 📌 Description
 
-Aplicación de escritorio desarrollada en Java que implementa el juego KenKen.
-El sistema permite generar y resolver tableros dinámicamente a partir de configuraciones definidas en archivos XML.
+Desktop application developed in Java that implements the KenKen puzzle game.  
+The system dynamically generates and solves boards based on configurations defined in XML files.
 
-## ⚙️ Tecnologías
+---
 
-* Java
-* XML (para definición de partidas)
-* Estructuras de datos (listas, parsing)
-* Manejo básico de concurrencia (threads)
+## ⚙️ Technologies
 
-## 🚀 Cómo ejecutar
+![Java](https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white)
+![XML](https://img.shields.io/badge/XML-005FAD?logo=xml&logoColor=white)
 
-1. Clonar el repositorio
-2. Abrir el proyecto en NetBeans o cualquier IDE compatible con Java
-3. Ejecutar la clase principal del proyecto
+- Java  
+- XML (game configuration)  
+- Data structures (lists, parsing)  
+- Basic concurrency handling (threads)  
 
-## 🧠 Funcionalidad
+---
 
-* Carga de múltiples partidas desde archivo XML
-* Generación dinámica de tableros según tamaño y configuración
-* Validación de reglas del juego en tiempo de ejecución
-* Selección de parámetros de juego:
+## 🧩 Project Structure
 
-  * Tamaño del tablero
-  * Nivel de dificultad
+- `controlador/` → Main execution logic (entry point)  
+- `modelo/` → Game logic and data handling  
+- `vista/` → UI components (Swing)  
+
+---
+
+## 🚀 How to Run
+
+### ⚙️ Requirements
+- Java JDK (version 8 or higher recommended)
+
+---
+
+### ▶️ Steps
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/SrSenior/KenKen.git
+   cd KenKen
+   ````
+
+2. Compile the project:
+
+   ```bash
+   javac controlador/Main.java
+   ```
+
+3. Run the application:
+
+   ```bash
+   java controlador.Main
+   ```
+
+---
+
+### 💡 Notes
+
+* The main class is located at:
+  `controlador/Main.java`
+* The project follows an MVC structure (Model–View–Controller) for better organization
+* Make sure you are running the commands from the root folder of the project
+* A sample XML configuration file is included in the project
+
+---
+
+## 🧠 Features
+
+* Load multiple game configurations from XML files
+* Dynamic board generation based on size and constraints
+* Real-time validation of KenKen rules
+* Game customization options:
+
+  * Board size
+  * Difficulty level
+
+---
 
 ## 📷 Demo
 
@@ -36,14 +86,27 @@ El sistema permite generar y resolver tableros dinámicamente a partir de config
 
 <img width="895" height="631" alt="image" src="https://github.com/user-attachments/assets/47a02ac3-28bf-4487-89d7-5b67f55f4a02" /><br><br>
 
-## 💡 Aprendizajes
+---
 
-* Lectura y procesamiento de archivos XML en Java
-* Separación entre lógica de negocio y configuración de datos
-* Organización de un proyecto modular en Java
-* Uso de threads para manejo de procesos concurrentes
+## 💡 What I Learned
 
-## 📌 Notas
+* Reading and processing XML files in Java
+* Separation between business logic and data configuration
+* Structuring a modular Java project
+* Using threads for concurrent processes
 
-* El archivo XML de configuración se encuentra incluido dentro del proyecto
-* Se incluye un manual de usuario para facilitar su uso
+---
+
+## 📌 Notes
+
+* The XML configuration file is included within the project
+* A user manual is provided to facilitate usage
+
+---
+
+## 👤 Author
+
+José Pablo Vega Solano
+[GitHub](https://github.com/SrSenior)
+
+```
