@@ -40,3 +40,7 @@ nbdist/
 # End of https://www.toptal.com/developers/gitignore/api/java,netbeans
 
 kenken2023podio.dat
+kenken2023podio.dat
+
+# NetBeans GUI Builder metadata
+*.form
