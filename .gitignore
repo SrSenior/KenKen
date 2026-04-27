@@ -37,11 +37,6 @@ dist/
 nbdist/
 .nb-gradle/
 
-# End of https://www.toptal.com/developers/gitignore/api/java,netbeans
-
-kenken2023podio.dat
-kenken2023podio.dat
-
 # NetBeans GUI Builder metadata
 *.form
 
@@ -56,4 +51,10 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
-.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.jar}
+
+
+## Document to follow up the podium results ###
+kenken2023podio.dat
+
+# End of https://www.toptal.com/developers/gitignore/api/java,netbeans
